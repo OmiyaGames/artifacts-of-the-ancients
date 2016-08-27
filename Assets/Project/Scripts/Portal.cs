@@ -36,7 +36,7 @@ public class Portal : ITriggers
         get
         {
             Transform returnTransform = spawnPointOnRightSideUp;
-            if((StageState.Instance != null) && (StageState.Instance.IsFlipped == true))
+            if((StageState.Instance != null) && (StageState.Instance.IsRightSideUp == false))
             {
                 returnTransform = spawnPointOnUpsideDown;
             }
@@ -48,7 +48,7 @@ public class Portal : ITriggers
     {
         get
         {
-            if ((StageState.Instance != null) && (StageState.Instance.IsFlipped == true))
+            if ((StageState.Instance != null) && (StageState.Instance.IsRightSideUp == false))
             {
                 return finalSpawnPositionOnUpsideDown;
             }
@@ -62,7 +62,7 @@ public class Portal : ITriggers
     void Start()
     {
         StageState.Instance.onAfterFlipped += OnAfterFlipped;
-        UpdateActivation(!StageState.Instance.IsFlipped);
+        UpdateActivation(!StageState.Instance.IsRightSideUp);
 
         finalSpawnPositionOnRightSideUp = spawnPointOnRightSideUp.position;
         finalSpawnPositionOnUpsideDown = transform.position;
@@ -73,7 +73,7 @@ public class Portal : ITriggers
 
     void OnAfterFlipped(StageState state)
     {
-        UpdateActivation(!state.IsFlipped);
+        UpdateActivation(!state.IsRightSideUp);
     }
 
     void UpdateActivation(bool rightSideUp)

@@ -16,7 +16,7 @@ public class StageState : MonoBehaviour
     Transform cameraTransform = null;
 
     PlatformerCharacter2D platformer = null;
-    bool isFlipped = false, isPaused = false;
+    bool isRightSideUp = true, isPaused = false;
     Portal lastPortal = null;
     Rigidbody2D body;
     Vector3 startPosition = Vector3.zero;
@@ -64,17 +64,17 @@ public class StageState : MonoBehaviour
         }
     }
 
-    public bool IsFlipped
+    public bool IsRightSideUp
     {
         get
         {
-            return isFlipped;
+            return isRightSideUp;
         }
         private set
         {
-            if(isFlipped != value)
+            if(isRightSideUp != value)
             {
-                isFlipped = value;
+                isRightSideUp = value;
                 if(onAfterFlipped != null)
                 {
                     onAfterFlipped(this);
@@ -140,7 +140,7 @@ public class StageState : MonoBehaviour
 
     public void ToggleFlip()
     {
-        IsFlipped = !IsFlipped;
+        IsRightSideUp = !IsRightSideUp;
     }
 
     public void Respawn()
