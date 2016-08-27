@@ -270,6 +270,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 1
+  k_GroundedRadius: 0.15
 --- !u!114 &114000012733381690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262d5cc9761eece42bbaafd34846349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 4000012124941882}
 --- !u!114 &114000013960180786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,7 +312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lerpSpeed: 15
-  cameraTransform: {fileID: 4000012124941882}
 --- !u!124 &124000013795213694
 Behaviour:
   m_ObjectHideFlags: 1

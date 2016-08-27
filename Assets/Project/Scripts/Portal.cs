@@ -36,7 +36,7 @@ public class Portal : ITriggers
         get
         {
             Transform returnTransform = spawnPointOnRightSideUp;
-            if((StageState.Instance != null) && (StageState.Instance.IsFlipped == false))
+            if((StageState.Instance != null) && (StageState.Instance.IsFlipped == true))
             {
                 returnTransform = spawnPointOnUpsideDown;
             }
@@ -48,7 +48,7 @@ public class Portal : ITriggers
     {
         get
         {
-            if ((StageState.Instance != null) && (StageState.Instance.IsFlipped == false))
+            if ((StageState.Instance != null) && (StageState.Instance.IsFlipped == true))
             {
                 return finalSpawnPositionOnUpsideDown;
             }

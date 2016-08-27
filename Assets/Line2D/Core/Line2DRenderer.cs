@@ -43,20 +43,26 @@ namespace Line2D
 #if UNITY_EDITOR
         void Update () 
 		{
-			if (Application.isPlaying)
+			if (Application.isPlaying == false)
 			{
 				if (updateVerts) lineMeshBuffer.UpdateVertices(points, useWorldSpace, useStraightTangent, widthMultiplier);
 				if (updateUvs) lineMeshBuffer.UpdateUVs(points, offsetU, tilingU, offsetV, tilingV);
 				if (updateColors) lineMeshBuffer.UpdateColors(points, colorTint);
 				if (updateVerts || updateUvs || updateColors) lineMeshBuffer.Apply();
 			}
-			else
-			{
-				UpdateCompleteLine();
-				lineMeshBuffer.Apply();
-			}
+			//else
+			//{
+			//	UpdateCompleteLine();
+			//	lineMeshBuffer.Apply();
+			//}
 		}
 #endif
+
+        public void UpdateLineToNewPoints()
+        {
+            lineMeshBuffer.UpdateVertices(points, useWorldSpace, useStraightTangent, widthMultiplier);
+            lineMeshBuffer.Apply();
+        }
 
         public void Apply()
 		{

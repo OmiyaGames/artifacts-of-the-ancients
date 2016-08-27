@@ -44,7 +44,6 @@ public class WorldFlipper : MonoBehaviour
     {
         if (CachedAnimator.GetBool(FlipField) != setFlip)
         {
-            Singleton.Get<TimeManager>().TimeScale = 0f;
             if(onStartFlipAnimation != null)
             {
                 onStartFlipAnimation(this);
@@ -59,6 +58,5 @@ public class WorldFlipper : MonoBehaviour
         {
             onEndFlipAnimation(this);
         }
-        Singleton.Get<TimeManager>().TimeScale = 1f;
     }
 }
