@@ -21,6 +21,8 @@ public class Portal : ITriggers
     [SerializeField]
     Transform spawnPointOnUpsideDown;
 
+    Vector3 finalSpawnPositionOnRightSideUp, finalSpawnPositionOnUpsideDown;
+
     public override Action ActionOnFire1
     {
         get
@@ -42,11 +44,18 @@ public class Portal : ITriggers
         }
     }
 
-    public Vector2 SpawnPointPosition
+    public Vector3 FinalSpawnPointPosition
     {
         get
         {
-            return SpawnPoint.position;
+            if ((StageState.Instance != null) && (StageState.Instance.IsFlipped == false))
+            {
+                return finalSpawnPositionOnUpsideDown;
+            }
+            else
+            {
+                return finalSpawnPositionOnRightSideUp;
+            }
         }
     }
 
@@ -54,6 +63,12 @@ public class Portal : ITriggers
     {
         StageState.Instance.onAfterFlipped += OnAfterFlipped;
         UpdateActivation(!StageState.Instance.IsFlipped);
+
+        finalSpawnPositionOnRightSideUp = spawnPointOnRightSideUp.position;
+        finalSpawnPositionOnUpsideDown = transform.position;
+        Vector3 diff = transform.position - spawnPointOnUpsideDown.position;
+        finalSpawnPositionOnUpsideDown.y *= -1f;
+        finalSpawnPositionOnUpsideDown.y += diff.y;
     }
 
     void OnAfterFlipped(StageState state)
