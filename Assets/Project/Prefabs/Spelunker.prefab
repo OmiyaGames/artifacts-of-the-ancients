@@ -71,13 +71,12 @@ GameObject:
   - 4: {fileID: 4000013507495504}
   - 212: {fileID: 212000012406540810}
   - 95: {fileID: 95000010075839810}
-  - 58: {fileID: 58000011736515398}
   - 50: {fileID: 50000013350995632}
   - 114: {fileID: 114000011950921576}
   - 114: {fileID: 114000010399629570}
-  - 61: {fileID: 61000011053370052}
   - 114: {fileID: 114000012733381690}
   - 114: {fileID: 114000014145233248}
+  - 60: {fileID: 60000011106618906}
   m_Layer: 0
   m_Name: Spelunker
   m_TagString: Player
@@ -191,22 +190,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58000011736515398
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013091768762}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.45}
-  serializedVersion: 2
-  m_Radius: 0.16
---- !u!61 &61000011053370052
-BoxCollider2D:
+--- !u!60 &60000011106618906
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -217,8 +202,14 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.68}
+  m_Points:
+    m_Paths:
+    - - {x: 0.053608265, y: -0.6139195}
+      - {x: 0.12138007, y: -0.43745524}
+      - {x: 0.1312983, y: 0.3360616}
+      - {x: -0.13013874, y: 0.3396882}
+      - {x: -0.13591075, y: -0.44236422}
+      - {x: -0.071542285, y: -0.6112076}
 --- !u!81 &81000010880205146
 AudioListener:
   m_ObjectHideFlags: 1
@@ -273,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxSpeed: 10
-  m_JumpForce: 600
+  m_JumpForce: 650
   m_CrouchSpeed: 0.25
   m_AirControl: 1
   m_WhatIsGround:

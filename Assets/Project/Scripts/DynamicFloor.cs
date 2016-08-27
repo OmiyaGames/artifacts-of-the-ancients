@@ -51,29 +51,33 @@ public class DynamicFloor : MonoBehaviour
     void Update()
     {
 #if UNITY_EDITOR
-        UpdateGraphics();
+        if(Application.isEditor && !Application.isPlaying)
+        {
+            UpdateGraphics();
+        }
 #else
 #endif
     }
 
     void UpdateGraphics()
     {
-        Graphic.SetVertexCount(Collider.pointCount * 2 - 2);
+        Graphic.SetVertexCount(Collider.pointCount);
+        //Graphic.SetVertexCount(Collider.pointCount * 2 - 2);
         int graphicIndex = 0;
         for(int colliderIndex = 0; colliderIndex < Collider.pointCount; ++colliderIndex)
         {
-            if((colliderIndex == 0) || (colliderIndex == (Collider.pointCount - 1)))
-            {
+            //if((colliderIndex == 0) || (colliderIndex == (Collider.pointCount - 1)))
+            //{
                 Graphic.SetPosition(graphicIndex, Collider.points[colliderIndex]);
                 ++graphicIndex;
-            }
-            else
-            {
-                Graphic.SetPosition(graphicIndex, Collider.points[colliderIndex]);
-                ++graphicIndex;
-                Graphic.SetPosition(graphicIndex, (Collider.points[colliderIndex] + (Random.insideUnitCircle * 0.01f)));
-                ++graphicIndex;
-            }
+            //}
+            //else
+            //{
+            //    Graphic.SetPosition(graphicIndex, Collider.points[colliderIndex]);
+            //    ++graphicIndex;
+            //    Graphic.SetPosition(graphicIndex, (Collider.points[colliderIndex] + (Random.insideUnitCircle * 0.01f)));
+            //    ++graphicIndex;
+            //}
         }
     }
 }
