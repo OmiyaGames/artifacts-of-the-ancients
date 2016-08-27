@@ -11,7 +11,6 @@ public class FlipperController : MonoBehaviour
     Transform cameraTransform = null;
 
     Rigidbody2D body;
-    readonly Vector3 targetLocalPosition = Vector3.zero;
 
     void Start()
     {
@@ -33,7 +32,6 @@ public class FlipperController : MonoBehaviour
         else if (body.isKinematic == true)
         {
             transform.position = Vector3.Lerp(transform.position, StageState.Instance.LastPortal.FinalSpawnPointPosition, (Time.unscaledDeltaTime * lerpSpeed));
-            //body.MovePosition(Vector2.Lerp(body.position, StageState.Instance.LastPortal.SpawnPointPosition, (Time.unscaledDeltaTime * lerpSpeed)));
         }
     }
 
@@ -47,7 +45,6 @@ public class FlipperController : MonoBehaviour
     {
         if ((StageState.Instance != null) && (StageState.Instance.LastPortal != null))
         {
-            Debug.Log(StageState.Instance.LastPortal.SpawnPoint.name);
             transform.position = StageState.Instance.LastPortal.SpawnPoint.position;
         }
         cameraTransform.SetParent(null);
