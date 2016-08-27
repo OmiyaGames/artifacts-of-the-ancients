@@ -48,6 +48,14 @@ namespace UnityStandardAssets._2D
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
         }
 
+        public bool IsGrounded
+        {
+            get
+            {
+                return m_Grounded;
+            }
+        }
+
 
         public void Move(float move, bool crouch, bool jump)
         {
