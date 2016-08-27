@@ -84,6 +84,14 @@ public class StageState : MonoBehaviour
         }
     }
 
+    public Portal LastPortal
+    {
+        get
+        {
+            return lastPortal;
+        }
+    }
+
     public bool AddTrigger(ITriggers trigger)
     {
         if (trigger is Portal)
