@@ -57,6 +57,7 @@ GameObject:
   - 114: {fileID: 114000010399629570}
   - 61: {fileID: 61000011053370052}
   - 114: {fileID: 114000012733381690}
+  - 114: {fileID: 114000014145233248}
   m_Layer: 0
   m_Name: Spelunker
   m_TagString: Player
@@ -205,6 +206,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 262d5cc9761eece42bbaafd34846349b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000014145233248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013091768762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d4a88e13cbfd34db66a358423a84f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212000012406540810

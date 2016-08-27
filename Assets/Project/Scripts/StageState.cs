@@ -92,19 +92,22 @@ public class StageState : MonoBehaviour
         }
     }
 
+    public void ToggleFlip()
+    {
+        IsFlipped = !IsFlipped;
+    }
+
     public bool AddTrigger(ITriggers trigger)
     {
         if (trigger is Portal)
         {
             lastPortal = (Portal)trigger;
         }
-        Debug.Log("Added " + trigger.name);
         return allTriggers.Add(trigger);
     }
 
     public bool RemoveTrigger(ITriggers trigger)
     {
-        Debug.Log("Removed " + trigger.name);
         return allTriggers.Remove(trigger);
     }
 }

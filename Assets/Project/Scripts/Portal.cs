@@ -15,11 +15,38 @@ public class Portal : ITriggers
     [SerializeField]
     GameObject[] deactivateOnUpsideDown;
 
+    [Header("Spawn Point")]
+    [SerializeField]
+    Transform spawnPointOnRightSideUp;
+    [SerializeField]
+    Transform spawnPointOnUpsideDown;
+
     public override Action ActionOnFire1
     {
         get
         {
             return Action.Flip;
+        }
+    }
+
+    public Transform SpawnPoint
+    {
+        get
+        {
+            Transform returnTransform = spawnPointOnRightSideUp;
+            if((StageState.Instance != null) && (StageState.Instance.IsFlipped == false))
+            {
+                returnTransform = spawnPointOnUpsideDown;
+            }
+            return returnTransform;
+        }
+    }
+
+    public Vector2 SpawnPointPosition
+    {
+        get
+        {
+            return SpawnPoint.position;
         }
     }
 
