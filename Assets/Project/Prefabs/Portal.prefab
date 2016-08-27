@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010300239476}
   - 114: {fileID: 114000013027262480}
+  - 50: {fileID: 50000010402179038}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -146,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010274482856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -231,7 +232,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010694639252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.3, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -250,6 +251,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010300239476}
   m_RootOrder: 1
+--- !u!50 &50000010402179038
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012938281380}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61000010592873214
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -331,6 +349,8 @@ MonoBehaviour:
   - {fileID: 1000013136729570}
   - {fileID: 1000010274482856}
   - {fileID: 1000010571520230}
+  spawnPointOnRightSideUp: {fileID: 4000010109971066}
+  spawnPointOnUpsideDown: {fileID: 4000012749832222}
 --- !u!114 &114000013367364870
 MonoBehaviour:
   m_ObjectHideFlags: 1
