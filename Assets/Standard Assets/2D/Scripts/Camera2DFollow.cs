@@ -27,34 +27,25 @@ namespace UnityStandardAssets._2D
 
 
         // Update is called once per frame
-        private void FixedUpdate()
+        private void Update()
         {
             // only update lookahead pos if accelerating or changed direction
-            Vector3 moveDelta = (target.position - m_LastTargetPosition);
-            bool adjustCamera = false;
-
-            if (Mathf.Abs(moveDelta.x) > lookAheadMoveThreshold)
+            float xMoveDelta = (target.position - m_LastTargetPosition).x;
+            bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
+            if (updateLookAheadTarget)
             {
-                m_LookAheadPos.x = target.position.x + (lookAheadFactor * Mathf.Sign(moveDelta.x));
-                adjustCamera = true;
-            }
-            if (Mathf.Abs(moveDelta.y) > verticalMoveThreshold)
-            {
-                m_LookAheadPos.y = target.position.y;
-                adjustCamera = true;
+                m_LookAheadPos = lookAheadFactor * Vector3.right * Mathf.Sign(xMoveDelta);
             }
             //else
             //{
             //    m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, Vector3.zero, Time.deltaTime*lookAheadReturnSpeed);
             //}
-            if (adjustCamera == true)
-            {
-                Vector3 aheadTargetPos = m_LookAheadPos + Vector3.forward * m_OffsetZ;
-                Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
+            Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward * m_OffsetZ;
+            Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
 
-                transform.position = newPos;
-                m_LastTargetPosition = target.position;
-            }
+            transform.position = newPos;
+
+            m_LastTargetPosition = target.position;
         }
     }
 }
