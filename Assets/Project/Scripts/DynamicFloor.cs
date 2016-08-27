@@ -52,7 +52,7 @@ public class DynamicFloor : MonoBehaviour
     void Update()
     {
 #if UNITY_EDITOR
-        if(Application.isEditor && !Application.isPlaying)
+        if(Application.isPlaying == false)
         {
             UpdateGraphics();
         }

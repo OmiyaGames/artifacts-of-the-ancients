@@ -7,47 +7,48 @@ public class FlipperController : MonoBehaviour
 {
     [SerializeField]
     float lerpSpeed = 20f;
-    [SerializeField]
-    Transform cameraTransform = null;
 
-    Rigidbody2D body;
+    bool flipStarted = false;
 
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
         WorldFlipper.Instance.onStartFlipAnimation += StartAnimation;
         WorldFlipper.Instance.onEndFlipAnimation += EndAnimation;
-        cameraTransform.SetParent(null);
     }
 
     void Update()
     {
-        if ((body.isKinematic == false) && (StageState.Instance != null) && (WorldFlipper.Instance != null) &&
-            (StageState.Instance.CurrentActionOnFire1 == ITriggers.Action.Flip) &&
-            (CrossPlatformInputManager.GetButtonDown("Fire1")== true))
+        if ((StageState.Instance != null) && (WorldFlipper.Instance != null))
         {
-            StageState.Instance.ToggleFlip();
-            WorldFlipper.Instance.ExecuteFlip(StageState.Instance.IsFlipped);
-        }
-        else if (body.isKinematic == true)
-        {
-            transform.position = Vector3.Lerp(transform.position, StageState.Instance.LastPortal.FinalSpawnPointPosition, (Time.unscaledDeltaTime * lerpSpeed));
+            if ((flipStarted == false) &&
+                (StageState.Instance.Platformer.IsGrounded == true) &&
+                (StageState.Instance.IsPaused == false) &&
+                (StageState.Instance.CurrentActionOnFire1 == ITriggers.Action.Flip) &&
+                (CrossPlatformInputManager.GetButtonDown("Fire1") == true))
+            {
+                StageState.Instance.ToggleFlip();
+                WorldFlipper.Instance.ExecuteFlip(StageState.Instance.IsFlipped);
+                flipStarted = true;
+            }
+            else if (flipStarted == true)
+            {
+                transform.position = Vector3.Lerp(transform.position, StageState.Instance.LastPortal.FinalSpawnPointPosition, (Time.unscaledDeltaTime * lerpSpeed));
+            }
         }
     }
 
     void StartAnimation(WorldFlipper flipper)
     {
-        body.isKinematic = true;
-        cameraTransform.SetParent(transform);
+        StageState.Instance.IsPaused = true;
     }
 
     void EndAnimation(WorldFlipper flipper)
     {
         if ((StageState.Instance != null) && (StageState.Instance.LastPortal != null))
         {
-            transform.position = StageState.Instance.LastPortal.SpawnPoint.position;
+            StageState.Instance.Respawn();
         }
-        cameraTransform.SetParent(null);
-        body.isKinematic = false;
+        flipStarted = false;
+        StageState.Instance.IsPaused = false;
     }
 }
