@@ -21,8 +21,10 @@ GameObject:
   - 4: {fileID: 4000014237315596}
   - 68: {fileID: 68000013605313396}
   - 50: {fileID: 50000010074217922}
-  - 120: {fileID: 120000014136872060}
+  - 114: {fileID: 114000010757345130}
   - 114: {fileID: 114000010180202310}
+  - 33: {fileID: 33000010396001156}
+  - 23: {fileID: 23000011901540532}
   m_Layer: 0
   m_Name: Dynamic Floor
   m_TagString: Untagged
@@ -43,6 +45,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!23 &23000011901540532
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014069184574}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f74f131457cd75741a813c41b2fc421b, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &33000010396001156
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014069184574}
+  m_Mesh: {fileID: 0}
 --- !u!50 &50000010074217922
 Rigidbody2D:
   serializedVersion: 2
@@ -98,57 +136,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54a5244119bca446bac9c2b577a145f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!120 &120000014136872060
-LineRenderer:
+--- !u!114 &114000010757345130
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014069184574}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 2100000, guid: f74f131457cd75741a813c41b2fc421b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0.25, z: 0}
-  - {x: 20, y: 0.25, z: 0}
-  - {x: 20, y: 2.5, z: 0}
-  - {x: 22.5, y: 2.5, z: 0}
-  - {x: 22.5, y: 0.25, z: 0}
-  - {x: 31.495724, y: 0.30163756, z: 0}
-  - {x: 32.889816, y: -1.3541176, z: 0}
-  - {x: 34.180477, y: -1.1512693, z: 0}
-  - {x: 33.57443, y: 0.16547656, z: 0}
-  - {x: 36.09221, y: 0.23176931, z: 0}
-  - {x: 36.45317, y: 1.576755, z: 0}
-  - {x: 37.623142, y: 2.0811472, z: 0}
-  - {x: 38.393726, y: 0.22608793, z: 0}
-  - {x: 47.5, y: 0.25, z: 0}
-  m_Parameters:
-    startWidth: 0.2
-    endWidth: 0.2
-    m_StartColor:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d48dd6eda964d8899ba2efc645eaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useWorldSpace: 0
+  useStraightTangent: 1
+  isStatic: 0
+  updateVerts: 1
+  updateUvs: 0
+  updateColors: 0
+  offsetU: 0
+  offsetV: 0
+  tilingU: 1
+  tilingV: 1
+  showHandles: 1
+  points:
+  - pos: {x: 0, y: 0.25, z: 0}
+    width: 1
+    color:
       serializedVersion: 2
       rgba: 4294967295
-    m_EndColor:
+  - pos: {x: 20, y: 0.25, z: 0}
+    width: 1
+    color:
       serializedVersion: 2
       rgba: 4294967295
-  m_UseWorldSpace: 0
+  - pos: {x: 20, y: 2.5, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 22.5, y: 2.5, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 22.5, y: 0.25, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 31.495724, y: 0.30163756, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 32.889816, y: -1.3541176, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 34.180477, y: -1.1512693, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 33.57443, y: 0.16547656, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 36.09221, y: 0.23176931, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 36.45317, y: 1.576755, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 37.623142, y: 2.0811472, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 38.393726, y: 0.22608793, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 47.5, y: 0.25, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  colorTint: {r: 1, g: 1, b: 1, a: 1}
+  widthMultiplier: 0.15
+  meshRenderer: {fileID: 23000011901540532}

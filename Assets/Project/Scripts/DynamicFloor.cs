@@ -1,23 +1,24 @@
 ﻿using UnityEngine;
+using Line2D;
 
 [DisallowMultipleComponent]
 [ExecuteInEditMode]
-[RequireComponent(typeof(LineRenderer))]
+[RequireComponent(typeof(Line2DRenderer))]
 [RequireComponent(typeof(EdgeCollider2D))]
 public class DynamicFloor : MonoBehaviour
 {
-    LineRenderer lineGraphic = null;
+    Line2DRenderer lineGraphic = null;
     EdgeCollider2D lineCollider = null;
 
     Vector2[] originalPoints = null;
 
-    public LineRenderer Graphic
+    public Line2DRenderer Graphic
     {
         get
         {
             if(lineGraphic == null)
             {
-                lineGraphic = GetComponent<LineRenderer>();
+                lineGraphic = GetComponent<Line2DRenderer>();
             }
             return lineGraphic;
         }
@@ -61,23 +62,20 @@ public class DynamicFloor : MonoBehaviour
 
     void UpdateGraphics()
     {
-        Graphic.SetVertexCount(Collider.pointCount);
-        //Graphic.SetVertexCount(Collider.pointCount * 2 - 2);
-        int graphicIndex = 0;
-        for(int colliderIndex = 0; colliderIndex < Collider.pointCount; ++colliderIndex)
+        for(int index = 0; index < Collider.pointCount; ++index)
         {
-            //if((colliderIndex == 0) || (colliderIndex == (Collider.pointCount - 1)))
-            //{
-                Graphic.SetPosition(graphicIndex, Collider.points[colliderIndex]);
-                ++graphicIndex;
-            //}
-            //else
-            //{
-            //    Graphic.SetPosition(graphicIndex, Collider.points[colliderIndex]);
-            //    ++graphicIndex;
-            //    Graphic.SetPosition(graphicIndex, (Collider.points[colliderIndex] + (Random.insideUnitCircle * 0.01f)));
-            //    ++graphicIndex;
-            //}
+            if(index < Graphic.points.Count)
+            {
+                Graphic.points[index].pos = Collider.points[index];
+            }
+            else
+            {
+                Graphic.points.Add(new Line2DPoint(Collider.points[index], 1f, Color.white));
+            }
+        }
+        while(Graphic.points.Count > Collider.pointCount)
+        {
+            Graphic.points.RemoveAt(Graphic.points.Count - 1);
         }
     }
 }
