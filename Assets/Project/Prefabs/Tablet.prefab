@@ -84,6 +84,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerType: 0
   uniqueId: Speech.Test 02
+  popUpActionText: Check
+  allToggles: []
 --- !u!212 &212000013034813398
 SpriteRenderer:
   m_ObjectHideFlags: 1

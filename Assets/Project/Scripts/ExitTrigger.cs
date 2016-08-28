@@ -11,6 +11,14 @@ public class ExitTrigger : ITriggers
         }
     }
 
+    public override string ActionText
+    {
+        get
+        {
+            return "Exit";
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if ((other.CompareTag(StageState.PlayerTag) == true) &&
