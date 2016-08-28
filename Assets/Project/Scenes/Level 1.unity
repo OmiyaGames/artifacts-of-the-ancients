@@ -1237,8 +1237,8 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: '*Bzzt* Assistant, I think I''ve encountered a problem. There is a ledge
-        here that is way too high for me to traverse.'
+      value: <color=#40a040ff>*Bzzt*</color> Assistant, I think I've encountered a
+        problem. There is a ledge here that is way too high for me to traverse.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
