@@ -58,17 +58,20 @@ namespace UnityStandardAssets._2D
             }
         }
 
+        public bool IsFacingRight
+        {
+            get
+            {
+                return m_FacingRight;
+            }
+        }
 
         public void Move(float move, bool crouch, bool jump)
         {
-            // If crouching, check to see if the character can stand up
-            if (!crouch && m_Anim.GetBool("Crouch"))
+            // If crouching, check to see if we're on the ground
+            if ((crouch == true) && (m_Grounded == false))
             {
-                // If the character has a ceiling preventing them from standing up, keep them crouching
-                if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-                {
-                    crouch = true;
-                }
+                crouch = false;
             }
 
             // Set whether or not the character is crouching in the animator
@@ -86,21 +89,26 @@ namespace UnityStandardAssets._2D
                 // Move the character
                 m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
-                // If the input is moving the player right and the player is facing left...
-                if (move > 0 && !m_FacingRight)
+                // Make sure flipping is enabled
+                if (crouch == false)
                 {
-                    // ... flip the player.
-                    Flip();
-                }
+                    // If the input is moving the player right and the player is facing left...
+                    if (move > 0 && !m_FacingRight)
+                    {
+                        // ... flip the player.
+                        Flip();
+                    }
                     // Otherwise if the input is moving the player left and the player is facing right...
-                else if (move < 0 && m_FacingRight)
-                {
-                    // ... flip the player.
-                    Flip();
+                    else if (move < 0 && m_FacingRight)
+                    {
+                        // ... flip the player.
+                        Flip();
+                    }
                 }
             }
+
             // If the player should jump...
-            if (m_Grounded && jump && m_Anim.GetBool("Ground"))
+            if (m_Grounded && (crouch == false) && jump && m_Anim.GetBool("Ground"))
             {
                 // Add a vertical force to the player.
                 m_Grounded = false;
