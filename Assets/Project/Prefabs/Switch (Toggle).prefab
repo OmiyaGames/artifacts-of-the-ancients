@@ -41,7 +41,7 @@ GameObject:
   - 95: {fileID: 95000011163964488}
   - 114: {fileID: 114000010005423486}
   m_Layer: 9
-  m_Name: Switch
+  m_Name: Switch (Toggle)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
