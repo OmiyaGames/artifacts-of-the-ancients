@@ -6,9 +6,13 @@ public class AnimationToggle : IToggle
     [SerializeField]
     bool isOnAtStart = true;
     [SerializeField]
+    bool oneWayToggle = false;
+
+    [Header("Programmger Info")]
+    [SerializeField]
     string isOnBoolField = "Is This On?";
 
-    bool isOn = false;
+    bool isOn = false, isToggledAtLeastOnce = false;
 
     public override bool IsOn
     {
@@ -18,10 +22,11 @@ public class AnimationToggle : IToggle
         }
         set
         {
-            if(isOn != value)
+            if((isOn != value) && ((oneWayToggle == false) || (isToggledAtLeastOnce == false)))
             {
                 isOn = value;
                 CachedAnimator.SetBool(isOnBoolField, isOn);
+                isToggledAtLeastOnce = true;
             }
         }
     }
@@ -31,5 +36,7 @@ public class AnimationToggle : IToggle
     {
         isOn = isOnAtStart;
         CachedAnimator.SetBool(isOnBoolField, isOn);
+
+        isToggledAtLeastOnce = false;
     }
 }

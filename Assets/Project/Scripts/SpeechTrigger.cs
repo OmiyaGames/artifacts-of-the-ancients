@@ -16,7 +16,7 @@ public class SpeechTrigger : ITriggers
     [SerializeField]
     string uniqueId = "Speech.Text 01";
 
-    [Header("Switch properties")]
+    [Header("Pop-up")]
     [SerializeField]
     string popUpActionText = "Examine";
 
@@ -145,7 +145,7 @@ public class SpeechTrigger : ITriggers
             {
                 if(allToggles[index] != null)
                 {
-                    allToggles[index].Toggle();
+                    allToggles[index].Toggle(this);
                 }
             }
         }

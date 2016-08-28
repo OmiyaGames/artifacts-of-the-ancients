@@ -413,7 +413,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Switch
+  m_Name: Switch (One-Way)
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Is This On?
@@ -502,7 +502,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7456064}
+  m_Motion: {fileID: 7400000, guid: 042efcdd9b7a05a4ea016398b1252e5e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
