@@ -768,6 +768,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[0].name
+      value: Assistant
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[0].speech
+      value: Press Left or Right arrow key to move.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[1].name
+      value: Assistant
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[1].speech
+      value: Or if you're hardcore like me, A or D.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013410041162, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: uniqueId
+      value: Speech.Level01-Tutorial1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
   m_IsPrefabParent: 0
@@ -1120,6 +1145,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2144417602}
     m_Modifications:
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 22.98
@@ -1151,6 +1181,41 @@ Prefab:
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[0].name
+      value: Note
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[0].speech
+      value: Hit the Up arrow key to jump.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[1].name
+      value: Note
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[1].speech
+      value: Or if you're hardcore like the assistant, W to jump.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013597273012, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: uniqueId
+      value: Speech.Level01-Tutorial2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[2].name
+      value: Note
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[2].speech
+      value: (P.S. This note was not written by the assistant.)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
