@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44711852, g: 0.4973939, b: 0.5761551, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -736,6 +736,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010284234486, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
       propertyPath: m_LocalPosition.x
       value: 28.58
@@ -771,12 +776,12 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Assistant
+      value: Doctor
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: Press Left or Right arrow key to move.
+      value: Great Scott! I think we may have found it!
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
@@ -786,12 +791,54 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Or if you're hardcore like me, A or D.
+      value: Do you really think so, doctor?
       objectReference: {fileID: 0}
     - target: {fileID: 114000013410041162, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: uniqueId
       value: Speech.Level01-Tutorial1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[2].name
+      value: Doctor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[2].speech
+      value: Yes, assistant. If my theory is correct, this may just be the long-lost
+        ruins we've been searching for.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].name
+      value: Assistant
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].speech
+      value: Wonderful! I will set up camp outside the site. Please contact me via
+        the headset if you need anything.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[4].name
+      value: Doctor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[4].speech
+      value: Sounds like a plan. Good luck, assistant. I will keep in touch.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[5].name
+      value: Assistant
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[5].speech
+      value: Likewise, doctor. See you soon.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
@@ -916,7 +963,7 @@ Prefab:
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 163.47197
+      value: 173.23944
       objectReference: {fileID: 0}
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
@@ -926,7 +973,7 @@ Prefab:
     - target: {fileID: 224000010601853050, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 183.47197
+      value: 193.23944
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe89d7f3827a3e94e93a5aa7b2c21a99, type: 2}
@@ -1148,7 +1195,7 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1185,22 +1232,25 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Note
+      value: Doctor
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: Hit the Up arrow key to jump.
+      value: '*Bzzt* Assistant, I think I''ve encountered a problem. There is a ledge
+        here that is way too high for me to traverse.'
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: Note
+      value: Assistant
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Or if you're hardcore like the assistant, W to jump.
+      value: Have you forgotten your thruster boots? Just press the <color=#ffff00ff>Up</color>,
+        <color=#ffff00ff>W</color> or the <color=#ffff00ff>Jump Button</color> on
+        your NavLink.
       objectReference: {fileID: 0}
     - target: {fileID: 114000013597273012, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
@@ -1210,12 +1260,22 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].name
-      value: Note
+      value: Doctor
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: (P.S. This note was not written by the assistant.)
+      value: Haha! Yes, I did. Thank you for the reminder, assistant.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].name
+      value: Assistant
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].speech
+      value: Anytime, doctor. That's what I'm here for.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
