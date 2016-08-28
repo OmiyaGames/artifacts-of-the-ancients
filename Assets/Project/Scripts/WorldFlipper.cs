@@ -1,11 +1,24 @@
 ﻿using UnityEngine;
-using OmiyaGames;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
 public class WorldFlipper : MonoBehaviour
 {
     public System.Action<WorldFlipper> onStartFlipAnimation;
     public System.Action<WorldFlipper> onEndFlipAnimation;
+
+    [Header("Required Components")]
+    [SerializeField]
+    Sprite rightSideUpImage;
+    [SerializeField]
+    Sprite upsideDownImage;
+
+    [Header("Required Components")]
+    [SerializeField]
+    Image opaqueBackground;
+    [SerializeField]
+    Image transparentBackground;
+
     static WorldFlipper instance = null;
     const string FlipField = "Is Right-Side Up?";
     Animator animatorCache = null;
@@ -21,6 +34,10 @@ public class WorldFlipper : MonoBehaviour
     void Awake()
     {
         instance = this;
+
+        // Setup background
+        opaqueBackground.sprite = rightSideUpImage;
+        transparentBackground.sprite = upsideDownImage;
     }
 
     void OnDestroy()
@@ -40,15 +57,29 @@ public class WorldFlipper : MonoBehaviour
         }
     }
 
-    public void ExecuteFlip(bool setFlip)
+    public void ExecuteFlip(bool isRightSideUp)
     {
-        if (CachedAnimator.GetBool(FlipField) != setFlip)
+        if (CachedAnimator.GetBool(FlipField) != isRightSideUp)
         {
             if(onStartFlipAnimation != null)
             {
                 onStartFlipAnimation(this);
             }
-            CachedAnimator.SetBool(FlipField, setFlip);
+
+            // Setup background
+            if (isRightSideUp == true)
+            {
+                opaqueBackground.sprite = rightSideUpImage;
+                transparentBackground.sprite = upsideDownImage;
+            }
+            else
+            {
+                opaqueBackground.sprite = upsideDownImage;
+                transparentBackground.sprite = rightSideUpImage;
+            }
+
+            // Animate
+            CachedAnimator.SetBool(FlipField, isRightSideUp);
         }
     }
 
