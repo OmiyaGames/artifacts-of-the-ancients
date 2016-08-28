@@ -15,4 +15,10 @@ public abstract class ITriggers : MonoBehaviour
     {
         get;
     }
+
+    // FIXME: add this when indicating the action control to the player
+    //public abstract string ActionText
+    //{
+    //    get;
+    //}
 }
