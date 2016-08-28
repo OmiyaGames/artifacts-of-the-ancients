@@ -15,6 +15,8 @@ public class SpeechTrigger : ITriggers
     Type triggerType;
     [SerializeField]
     string uniqueId = "Speech.Text 01";
+    [SerializeField]
+    IToggle[] allToggles;
 
     const float delayStartSpeech = 0.75f;
     bool startSpeech = false;
@@ -94,18 +96,47 @@ public class SpeechTrigger : ITriggers
     {
         if(startSpeech == false)
         {
-            Singleton.Get<MenuManager>().GetMenu<SpokenDialog>().ShowSpeech(Speech, GameSettings.GetBool(uniqueId, false));
-            Singleton.Get<MenuManager>().GetMenu<SpokenDialog>().onHide += OnHideAction;
+            // Update flags
             startSpeech = true;
+            bool showSkip = false;
+            if(string.IsNullOrEmpty(uniqueId) == false)
+            {
+                showSkip = GameSettings.GetBool(uniqueId, false);
+            }
+
+            // Bind to event
+            Singleton.Get<MenuManager>().GetMenu<SpokenDialog>().onHide += OnHideAction;
+
+            // Show the dialog
+            Singleton.Get<MenuManager>().GetMenu<SpokenDialog>().ShowSpeech(Speech, showSkip);
         }
     }
 
     void ResetFlags(SpokenDialog dialog)
     {
-        GameSettings.SetBool(uniqueId, true);
+        // Update flags
+        if (string.IsNullOrEmpty(uniqueId) == false)
+        {
+            GameSettings.SetBool(uniqueId, true);
+        }
         if (triggerType == Type.ManualTrigger)
         {
             startSpeech = false;
         }
+
+        // Toggle switches
+        if((allToggles != null) && (allToggles.Length > 0))
+        {
+            for(int index = 0; index < allToggles.Length; ++index)
+            {
+                if(allToggles[index] != null)
+                {
+                    allToggles[index].Toggle();
+                }
+            }
+        }
+
+        // Remove self from event
+        Singleton.Get<MenuManager>().GetMenu<SpokenDialog>().onHide -= OnHideAction;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using OmiyaGames;
+using System;
 
 [RequireComponent(typeof(Animator))]
 public class SpokenDialog : IMenu
@@ -132,6 +133,11 @@ public class SpokenDialog : IMenu
             // Show the dialog
             Show();
             StageState.Instance.IsPaused = true;
+        }
+        else if (onHide != null)
+        {
+            // Run the hide event if we aren't displaying any speeches
+            onHide(this);
         }
     }
 
