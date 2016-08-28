@@ -309,7 +309,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0790c8ef21b5bd642bef40b82332632c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -338,22 +338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7968350149160dc429ffcfe4d92a120b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateOnRightSideUp:
-  - {fileID: 1000013136729570}
-  - {fileID: 1000010274482856}
-  - {fileID: 1000010571520230}
-  activateOnUpsideDown:
-  - {fileID: 1000011148217662}
-  - {fileID: 1000010694639252}
-  - {fileID: 1000010379326652}
-  deactivateOnRightSideUp:
-  - {fileID: 1000011148217662}
-  - {fileID: 1000010694639252}
-  - {fileID: 1000010379326652}
-  deactivateOnUpsideDown:
-  - {fileID: 1000013136729570}
-  - {fileID: 1000010274482856}
-  - {fileID: 1000010571520230}
   spawnPointOnRightSideUp: {fileID: 4000010109971066}
   spawnPointOnUpsideDown: {fileID: 4000012749832222}
 --- !u!114 &114000013367364870
