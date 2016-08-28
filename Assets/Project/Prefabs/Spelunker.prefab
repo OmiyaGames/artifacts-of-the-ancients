@@ -407,6 +407,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 1
+  m_RemainUnflipped: {fileID: 224000010805057776}
   k_GroundedRadius: 0.15
 --- !u!114 &114000012470343562
 MonoBehaviour:
