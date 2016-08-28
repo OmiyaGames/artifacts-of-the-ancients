@@ -141,7 +141,7 @@ public class SpeechTrigger : ITriggers
         // Toggle switches
         if((allToggles != null) && (allToggles.Length > 0))
         {
-            for(int index = 0; index < allToggles.Length; ++index)
+            for (int index = 0; index < allToggles.Length; ++index)
             {
                 if(allToggles[index] != null)
                 {
@@ -151,6 +151,7 @@ public class SpeechTrigger : ITriggers
         }
 
         // Remove self from event
+        StageState.Instance.RemoveTrigger(this);
         Singleton.Get<MenuManager>().GetMenu<SpokenDialog>().onHide -= OnHideAction;
     }
 }
