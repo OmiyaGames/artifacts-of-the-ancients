@@ -111,11 +111,25 @@ public class SpokenDialog : IMenu
     {
         if (newSpeech != null)
         {
-            skipButton.SetActive(showSkip);
+            // Update speech variable
             currentSpeech = newSpeech;
+
+            // Update skip button
+            if((showSkip == true) && (currentSpeech.AllSpeeches.Length > 1))
+            {
+                skipButton.SetActive(true);
+            }
+            else
+            {
+                skipButton.SetActive(false);
+            }
+
+            // Update the speech texts
             speechIndex = 0;
             nameLabel.text = currentSpeech.AllSpeeches[speechIndex].Name;
             speechLabel.text = currentSpeech.AllSpeeches[speechIndex].Dialog;
+
+            // Show the dialog
             Show();
             StageState.Instance.IsPaused = true;
         }
