@@ -111,7 +111,6 @@ public class SpokenDialog : IMenu
     {
         if (newSpeech != null)
         {
-            Debug.Log("ShowSpeech");
             skipButton.SetActive(showSkip);
             currentSpeech = newSpeech;
             speechIndex = 0;
@@ -134,7 +133,7 @@ public class SpokenDialog : IMenu
 
     public void OnNextClicked()
     {
-        if (CurrentState == State.Visible)
+        if (CurrentState != State.Hidden)
         {
             ++speechIndex;
             if (speechIndex < currentSpeech.AllSpeeches.Length)
