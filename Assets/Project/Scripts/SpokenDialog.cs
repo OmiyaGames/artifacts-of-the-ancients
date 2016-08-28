@@ -103,7 +103,7 @@ public class SpokenDialog : IMenu
     }
     public void UpdateState()
     {
-        CurrentState = State.Visible;
+        //CurrentState = State.Visible;
     }
     #endregion
 
@@ -143,7 +143,7 @@ public class SpokenDialog : IMenu
             }
             else
             {
-                CurrentState = State.Hidden;
+                Hide();
             }
         }
     }
