@@ -365,7 +365,7 @@ AnimationClip:
         value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
+        tangentMode: 0
       - time: 0.33333334
         value: 0
         inSlope: 0
@@ -453,7 +453,7 @@ AnimationClip:
         value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
+        tangentMode: 0
       - time: 0.33333334
         value: 1
         inSlope: 6
@@ -478,7 +478,7 @@ AnimationClip:
         value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
+        tangentMode: 0
       - time: 0.33333334
         value: 1
         inSlope: 0
@@ -503,7 +503,7 @@ AnimationClip:
         value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
+        tangentMode: 0
       - time: 0.33333334
         value: 1
         inSlope: 0
@@ -528,7 +528,7 @@ AnimationClip:
         value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
+        tangentMode: 0
       - time: 0.33333334
         value: 0
         inSlope: 0

@@ -16,6 +16,7 @@ public class StageState : MonoBehaviour
     Transform cameraTransform = null;
 
     PlatformerCharacter2D platformer = null;
+    Platformer2DUserControl controller = null;
     bool isRightSideUp = true, isPaused = false;
     Portal lastPortal = null;
     Rigidbody2D body;
@@ -53,6 +54,18 @@ public class StageState : MonoBehaviour
                 platformer = GetComponent<PlatformerCharacter2D>();
             }
             return platformer;
+        }
+    }
+
+    public Platformer2DUserControl Controller
+    {
+        get
+        {
+            if(controller == null)
+            {
+                controller = GetComponent<Platformer2DUserControl>();
+            }
+            return controller;
         }
     }
 
@@ -124,12 +137,14 @@ public class StageState : MonoBehaviour
                 isPaused = value;
                 if (isPaused == true)
                 {
+                    Controller.enabled = false;
                     Body.isKinematic = true;
                     Singleton.Get<TimeManager>().TimeScale = 0f;
                     cameraTransform.SetParent(transform);
                 }
                 else
                 {
+                    Controller.enabled = true;
                     cameraTransform.SetParent(null);
                     Singleton.Get<TimeManager>().RevertToOriginalTime();
                     body.isKinematic = false;
