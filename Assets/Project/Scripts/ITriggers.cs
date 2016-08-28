@@ -5,7 +5,9 @@ public abstract class ITriggers : MonoBehaviour
     public enum Action
     {
         Invalid = -1,
-        Flip = 0,
+        Exit = 0,
+        Flip,
+        Examine,
         Grab
     }
 
