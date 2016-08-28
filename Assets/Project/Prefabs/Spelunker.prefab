@@ -458,6 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 4000012124941882}
+  popUpLabel: {fileID: 114000011559536690}
 --- !u!114 &114000012963996038
 MonoBehaviour:
   m_ObjectHideFlags: 1

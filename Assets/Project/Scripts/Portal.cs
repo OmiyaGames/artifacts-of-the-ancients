@@ -63,6 +63,14 @@ public class Portal : ITriggers
         }
     }
 
+    public override string ActionText
+    {
+        get
+        {
+            return "Flip";
+        }
+    }
+
     void Start()
     {
         StageState.Instance.onAfterFlipped += OnAfterFlipped;
