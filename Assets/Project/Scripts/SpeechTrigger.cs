@@ -58,13 +58,11 @@ public class SpeechTrigger : ITriggers
         }
     }
 
-    // Use this for initialization
     void Start ()
     {
         startSpeech = false;
         if (triggerType == Type.StartTrigger)
         {
-            Debug.Log("Start Trigger");
             StartDialog();
         }
     }
@@ -81,7 +79,6 @@ public class SpeechTrigger : ITriggers
     {
         if(startSpeech == false)
         {
-            Debug.Log("Start Dialog");
             Singleton.Get<MenuManager>().GetMenu<SpokenDialog>().ShowSpeech(Speech, GameSettings.GetBool(uniqueId, false));
             Singleton.Get<MenuManager>().GetMenu<SpokenDialog>().onHide += OnHideAction;
             startSpeech = true;
