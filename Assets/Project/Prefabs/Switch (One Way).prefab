@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8d18963cf15234d938f28fcba4180d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOnAtStart: 0
+  isOnAtStart: 1
   oneWayToggle: 1
   isOnBoolField: Is This On?
 --- !u!114 &114000014130529292
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerType: 0
   uniqueId: 
-  popUpActionText: Toggle
+  popUpActionText: Turn On
   allToggles:
   - {fileID: 114000013140991010}
   - {fileID: 0}
