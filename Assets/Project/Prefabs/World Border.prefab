@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce6b906a51999a4fae414a12fad4085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killOnTriggerEnter: 0
 --- !u!114 &114000013410041162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,3 +98,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerType: 1
   uniqueId: Speech.Test 01
+  allToggles: []
