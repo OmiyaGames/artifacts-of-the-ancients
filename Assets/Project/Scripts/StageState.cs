@@ -100,19 +100,21 @@ public class StageState : MonoBehaviour
     {
         get
         {
-            int returnAction = (int)ITriggers.Action.Invalid, compareAction;
-            if (Platformer.IsGrounded == true)
-            {
-                foreach (ITriggers trigger in allTriggers)
-                {
-                    compareAction = (int)trigger.ActionOnFire1;
-                    if (compareAction > returnAction)
-                    {
-                        returnAction = compareAction;
-                    }
-                }
-            }
-            return (ITriggers.Action)returnAction;
+            ITriggers.Action returnAction = ITriggers.Action.Invalid;
+            ITriggers returnTrigger = null;
+            SearchCurrentTrigger(out returnTrigger, out returnAction);
+            return returnAction;
+        }
+    }
+
+    public ITriggers CurrentTriggerOnFire1
+    {
+        get
+        {
+            ITriggers.Action returnAction = ITriggers.Action.Invalid;
+            ITriggers returnTrigger = null;
+            SearchCurrentTrigger(out returnTrigger, out returnAction);
+            return returnTrigger;
         }
     }
 
@@ -183,5 +185,28 @@ public class StageState : MonoBehaviour
     public bool RemoveTrigger(ITriggers trigger)
     {
         return allTriggers.Remove(trigger);
+    }
+
+    void SearchCurrentTrigger(out ITriggers returnTrigger, out ITriggers.Action returnAction)
+    {
+        // Setup default return values
+        returnAction = ITriggers.Action.Invalid;
+        returnTrigger = null;
+
+        // Search for the current trigger
+        int returnActionInt = (int)returnAction, compareActionInt;
+        if (Platformer.IsGrounded == true)
+        {
+            foreach (ITriggers trigger in allTriggers)
+            {
+                compareActionInt = (int)trigger.ActionOnFire1;
+                if (compareActionInt > returnActionInt)
+                {
+                    returnTrigger = trigger;
+                    returnActionInt = compareActionInt;
+                }
+            }
+        }
+        returnAction = (ITriggers.Action)returnActionInt;
     }
 }

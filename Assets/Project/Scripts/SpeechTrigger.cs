@@ -72,13 +72,25 @@ public class SpeechTrigger : ITriggers
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if ((triggerType == Type.ManualTrigger) && (other.CompareTag(StageState.PlayerTag) == true))
+        if ((triggerType == Type.ManualTrigger) &&
+            (other.CompareTag(StageState.PlayerTag) == true) &&
+            (StageState.Instance != null))
         {
-            StartDialog();
+            StageState.Instance.AddTrigger(this);
         }
     }
 
-    void StartDialog()
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if ((triggerType == Type.ManualTrigger) &&
+            (other.CompareTag(StageState.PlayerTag) == true) &&
+            (StageState.Instance != null))
+        {
+            StageState.Instance.RemoveTrigger(this);
+        }
+    }
+
+    public void StartDialog()
     {
         if(startSpeech == false)
         {
