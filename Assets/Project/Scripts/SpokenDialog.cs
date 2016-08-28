@@ -109,8 +109,9 @@ public class SpokenDialog : IMenu
 
     public void ShowSpeech(SpokenSpeech newSpeech, bool showSkip)
     {
-        if (currentSpeech != null)
+        if (newSpeech != null)
         {
+            Debug.Log("ShowSpeech");
             skipButton.SetActive(showSkip);
             currentSpeech = newSpeech;
             speechIndex = 0;
