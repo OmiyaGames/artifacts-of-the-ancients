@@ -21,8 +21,7 @@ public class FlipperController : MonoBehaviour
         if ((StageState.Instance != null) && (WorldFlipper.Instance != null))
         {
             if ((flipStarted == false) &&
-                (StageState.Instance.Platformer.IsGrounded == true) &&
-                (StageState.Instance.IsPaused == false) &&
+                (StageState.Instance.IsPopUpVisible == true) &&
                 (StageState.Instance.CurrentActionOnFire1 == ITriggers.Action.Flip) &&
                 (CrossPlatformInputManager.GetButtonDown("Fire1") == true))
             {
