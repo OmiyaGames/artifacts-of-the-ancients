@@ -109,7 +109,7 @@ public class SpokenDialog : IMenu
 
     public void ShowSpeech(SpokenSpeech newSpeech, bool showSkip)
     {
-        if (newSpeech != null)
+        if ((newSpeech != null) && (newSpeech.AllSpeeches.Length > 0))
         {
             // Update speech variable
             currentSpeech = newSpeech;
