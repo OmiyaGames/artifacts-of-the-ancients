@@ -15,6 +15,12 @@ public class SpeechTrigger : ITriggers
     Type triggerType;
     [SerializeField]
     string uniqueId = "Speech.Text 01";
+
+    [Header("Switch properties")]
+    [SerializeField]
+    string popUpActionText = "Examine";
+
+    [Header("Switch properties")]
     [SerializeField]
     IToggle[] allToggles;
 
@@ -59,6 +65,14 @@ public class SpeechTrigger : ITriggers
             {
                 return Action.Invalid;
             }
+        }
+    }
+
+    public override string ActionText
+    {
+        get
+        {
+            return popUpActionText;
         }
     }
 

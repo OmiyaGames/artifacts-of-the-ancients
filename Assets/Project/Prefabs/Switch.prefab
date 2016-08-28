@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerType: 0
   uniqueId: 
+  popUpActionText: Toggle
   allToggles:
   - {fileID: 114000010005423486}
   - {fileID: 0}

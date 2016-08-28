@@ -8,28 +8,39 @@ using OmiyaGames;
 public class StageState : MonoBehaviour
 {
     public const string PlayerTag = "Player";
+    public const string PopUpVisibleBoolField = "Is Pop-Up Visible?";
+    public const string PopUpChangeTriggerField = "Change Pop-Up";
     public event System.Action<StageState> onAfterFlipped;
 
     static StageState instance = null;
 
     [SerializeField]
     Transform cameraTransform = null;
+    [SerializeField]
+    UnityEngine.UI.Text popUpLabel = null;
 
     PlatformerCharacter2D platformer = null;
     Platformer2DUserControl controller = null;
-    bool isRightSideUp = true, isPaused = false;
+    bool isRightSideUp = true, isPaused = false,
+        wasPopUpVisibleLastFrame = false;
     Portal lastPortal = null;
     Rigidbody2D body;
+    Animator characterAnimation = null;
     Vector3 startPosition = Vector3.zero;
+    ITriggers latestTrigger = null;
+    string lastPopUpText = null;
 
     readonly HashSet<ITriggers> allTriggers = new HashSet<ITriggers>();
 
     void Awake()
     {
-        instance = this;
         body = GetComponent<Rigidbody2D>();
+        characterAnimation = GetComponent<Animator>();
         startPosition = transform.position;
         cameraTransform.SetParent(null);
+
+        // Set instance last
+        instance = this;
     }
 
     void OnDestroy()
@@ -37,6 +48,42 @@ public class StageState : MonoBehaviour
         instance = null;
     }
 
+    void Update()
+    {
+        if(IsPopUpVisible == true)
+        {
+            if(wasPopUpVisibleLastFrame == false)
+            {
+                // Show the pop up
+                UpdatePopUpText();
+                characterAnimation.SetBool(PopUpVisibleBoolField, true);
+                characterAnimation.ResetTrigger(PopUpChangeTriggerField);
+
+                // Update this frame's information
+                lastPopUpText = CurrentTriggerOnFire1.ActionText;
+                wasPopUpVisibleLastFrame = true;
+            }
+            else if(string.Equals(lastPopUpText, CurrentTriggerOnFire1.ActionText) == false)
+            {
+                // Play the pop-up not visible anmation
+                characterAnimation.SetTrigger(PopUpChangeTriggerField);
+
+                // Update this frame's information
+                lastPopUpText = CurrentTriggerOnFire1.ActionText;
+            }
+        }
+        else if(wasPopUpVisibleLastFrame == true)
+        {
+            // Hide the pop-up
+            characterAnimation.SetBool(PopUpVisibleBoolField, false);
+
+            // Update this frame's information
+            lastPopUpText = null;
+            wasPopUpVisibleLastFrame = false;
+        }
+    }
+
+    #region Properties
     public static StageState Instance
     {
         get
@@ -100,10 +147,14 @@ public class StageState : MonoBehaviour
     {
         get
         {
-            ITriggers.Action returnAction = ITriggers.Action.Invalid;
-            ITriggers returnTrigger = null;
-            SearchCurrentTrigger(out returnTrigger, out returnAction);
-            return returnAction;
+            if(CurrentTriggerOnFire1 != null)
+            {
+                return CurrentTriggerOnFire1.ActionOnFire1;
+            }
+            else
+            {
+                return ITriggers.Action.Invalid;
+            }
         }
     }
 
@@ -111,10 +162,7 @@ public class StageState : MonoBehaviour
     {
         get
         {
-            ITriggers.Action returnAction = ITriggers.Action.Invalid;
-            ITriggers returnTrigger = null;
-            SearchCurrentTrigger(out returnTrigger, out returnAction);
-            return returnTrigger;
+            return latestTrigger;
         }
     }
 
@@ -123,6 +171,19 @@ public class StageState : MonoBehaviour
         get
         {
             return lastPortal;
+        }
+    }
+
+    public bool IsPopUpVisible
+    {
+        get
+        {
+            bool returnFlag = false;
+            if((CurrentTriggerOnFire1 != null) && (string.IsNullOrEmpty(CurrentTriggerOnFire1.ActionText) == false) && (Platformer.IsGrounded == true) && (IsPaused == false))
+            {
+                returnFlag = true;
+            }
+            return returnFlag;
         }
     }
 
@@ -154,6 +215,7 @@ public class StageState : MonoBehaviour
             }
         }
     }
+    #endregion
 
     public void ToggleFlip()
     {
@@ -175,38 +237,63 @@ public class StageState : MonoBehaviour
 
     public bool AddTrigger(ITriggers trigger)
     {
-        if (trigger is Portal)
+        bool returnFlag = false;
+        if (trigger != null)
         {
-            lastPortal = (Portal)trigger;
+            returnFlag = allTriggers.Add(trigger);
+            if (trigger is Portal)
+            {
+                lastPortal = (Portal)trigger;
+            }
+            if (returnFlag == true)
+            {
+                SearchCurrentTrigger(out latestTrigger);
+            }
         }
-        return allTriggers.Add(trigger);
+        return returnFlag;
     }
 
     public bool RemoveTrigger(ITriggers trigger)
     {
-        return allTriggers.Remove(trigger);
+        bool returnFlag = false;
+        if (trigger != null)
+        {
+            returnFlag = allTriggers.Remove(trigger);
+            if (returnFlag == true)
+            {
+                SearchCurrentTrigger(out latestTrigger);
+            }
+        }
+        return returnFlag;
     }
 
-    void SearchCurrentTrigger(out ITriggers returnTrigger, out ITriggers.Action returnAction)
+    public void UpdatePopUpText()
+    {
+        if(CurrentTriggerOnFire1 != null)
+        {
+            popUpLabel.text = CurrentTriggerOnFire1.ActionText;
+        }
+    }
+
+    void SearchCurrentTrigger(out ITriggers returnTrigger)
     {
         // Setup default return values
-        returnAction = ITriggers.Action.Invalid;
         returnTrigger = null;
-
-        // Search for the current trigger
-        int returnActionInt = (int)returnAction, compareActionInt;
-        if (Platformer.IsGrounded == true)
+        if (allTriggers.Count > 0)
         {
+            // Search for the current trigger
+            int compareActionInt, highestActionInt = (int)ITriggers.Action.Invalid;
             foreach (ITriggers trigger in allTriggers)
             {
+                // Check to see if this trigger has a higher action id
                 compareActionInt = (int)trigger.ActionOnFire1;
-                if (compareActionInt > returnActionInt)
+                if (compareActionInt > highestActionInt)
                 {
+                    // If it does, set the return value
                     returnTrigger = trigger;
-                    returnActionInt = compareActionInt;
+                    highestActionInt = compareActionInt;
                 }
             }
         }
-        returnAction = (ITriggers.Action)returnActionInt;
     }
 }
