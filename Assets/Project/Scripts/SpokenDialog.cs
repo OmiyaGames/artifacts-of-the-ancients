@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using OmiyaGames;
-using System;
 
 [RequireComponent(typeof(Animator))]
 public class SpokenDialog : IMenu

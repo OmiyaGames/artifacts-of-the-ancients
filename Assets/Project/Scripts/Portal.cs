@@ -4,19 +4,7 @@
 [RequireComponent(typeof(Animator))]
 public class Portal : ITriggers
 {
-    // FIXME: remove these member variables
-    [Header("Activate")]
-    [SerializeField]
-    GameObject[] activateOnRightSideUp;
-    [SerializeField]
-    GameObject[] activateOnUpsideDown;
-
-    // FIXME: remove these member variables
-    [Header("Deactivate")]
-    [SerializeField]
-    GameObject[] deactivateOnRightSideUp;
-    [SerializeField]
-    GameObject[] deactivateOnUpsideDown;
+    const string RightSideUpBoolField = "Is Right-Side Up?";
 
     [Header("Spawn Point")]
     [SerializeField]
@@ -78,7 +66,7 @@ public class Portal : ITriggers
     void Start()
     {
         StageState.Instance.onAfterFlipped += OnAfterFlipped;
-        UpdateActivation(!StageState.Instance.IsRightSideUp);
+        UpdateActivation(StageState.Instance.IsRightSideUp);
 
         finalSpawnPositionOnRightSideUp = spawnPointOnRightSideUp.position;
         finalSpawnPositionOnUpsideDown = transform.position;
@@ -89,27 +77,11 @@ public class Portal : ITriggers
 
     void OnAfterFlipped(StageState state)
     {
-        UpdateActivation(!state.IsRightSideUp);
+        UpdateActivation(state.IsRightSideUp);
     }
 
     void UpdateActivation(bool rightSideUp)
     {
-        GameObject[] activate = activateOnRightSideUp;
-        GameObject[] deactivate = deactivateOnRightSideUp;
-        if(rightSideUp == false)
-        {
-            activate = activateOnUpsideDown;
-            deactivate = deactivateOnUpsideDown;
-        }
-
-        int index = 0;
-        for (; index < activate.Length; ++index)
-        {
-            activate[index].SetActive(true);
-        }
-        for(index = 0; index < deactivate.Length; ++index)
-        {
-            deactivate[index].SetActive(true);
-        }
+        CachedAnimator.SetBool(RightSideUpBoolField, rightSideUp);
     }
 }

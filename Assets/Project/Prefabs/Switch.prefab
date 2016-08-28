@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000014280765134}
   m_IsPrefabParent: 1
+--- !u!1 &1000010605257556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010505445722}
+  - 212: {fileID: 212000013015410496}
+  m_Layer: 9
+  m_Name: Graphic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000014280765134
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,7 +35,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012295056928}
-  - 212: {fileID: 212000012081057010}
   - 61: {fileID: 61000012330522350}
   - 114: {fileID: 114000012142491286}
   - 114: {fileID: 114000014008079284}
@@ -32,6 +47,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4000010505445722
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010605257556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000012295056928}
+  m_RootOrder: 0
 --- !u!4 &4000012295056928
 Transform:
   m_ObjectHideFlags: 1
@@ -40,9 +68,10 @@ Transform:
   m_GameObject: {fileID: 1000014280765134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 16.23, y: 1.53, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 4000010505445722}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!61 &61000012330522350
@@ -58,7 +87,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 2.5}
+  m_Size: {x: 1, y: 1}
 --- !u!95 &95000011163964488
 Animator:
   serializedVersion: 3
@@ -117,12 +146,12 @@ MonoBehaviour:
   allToggles:
   - {fileID: 114000010005423486}
   - {fileID: 0}
---- !u!212 &212000012081057010
+--- !u!212 &212000013015410496
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014280765134}
+  m_GameObject: {fileID: 1000010605257556}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
