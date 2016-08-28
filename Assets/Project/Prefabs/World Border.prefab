@@ -21,6 +21,8 @@ GameObject:
   - 4: {fileID: 4000010284234486}
   - 61: {fileID: 61000010346382436}
   - 114: {fileID: 114000011807131264}
+  - 114: {fileID: 114000010374019784}
+  - 114: {fileID: 114000013410041162}
   m_Layer: 8
   m_Name: World Border
   m_TagString: Untagged
@@ -55,6 +57,22 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 50, y: 20}
+--- !u!114 &114000010374019784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012338164372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b719b0429ecea419df901a81a904b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allSpeeches:
+  - name: Tony Stark
+    speech: This is the worst armor ever.
+  - name: Taro Omiya
+    speech: Well, thanks....
 --- !u!114 &114000011807131264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,3 +84,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce6b906a51999a4fae414a12fad4085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000013410041162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012338164372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c48582fa61590874eb5bb2d18e6d7228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 1
+  uniqueId: Speech.Test 01

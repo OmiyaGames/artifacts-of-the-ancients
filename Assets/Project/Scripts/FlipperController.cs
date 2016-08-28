@@ -26,9 +26,7 @@ public class FlipperController : MonoBehaviour
                 (StageState.Instance.CurrentActionOnFire1 == ITriggers.Action.Flip) &&
                 (CrossPlatformInputManager.GetButtonDown("Fire1") == true))
             {
-                Debug.Log("Toggle Flip: " + StageState.Instance.IsRightSideUp);
                 StageState.Instance.ToggleFlip();
-                Debug.Log("Execute Flip: " + StageState.Instance.IsRightSideUp);
                 WorldFlipper.Instance.ExecuteFlip(StageState.Instance.IsRightSideUp);
                 flipStarted = true;
             }

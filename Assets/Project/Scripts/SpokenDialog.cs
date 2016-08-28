@@ -5,6 +5,8 @@ using OmiyaGames;
 [RequireComponent(typeof(Animator))]
 public class SpokenDialog : IMenu
 {
+    public System.Action<SpokenDialog> onHide;
+
     [SerializeField]
     Text nameLabel;
     [SerializeField]
@@ -114,7 +116,7 @@ public class SpokenDialog : IMenu
             speechIndex = 0;
             nameLabel.text = currentSpeech.AllSpeeches[speechIndex].Name;
             speechLabel.text = currentSpeech.AllSpeeches[speechIndex].Dialog;
-            CurrentState = State.Visible;
+            Show();
             StageState.Instance.IsPaused = true;
         }
     }
@@ -123,6 +125,10 @@ public class SpokenDialog : IMenu
     {
         base.Hide();
         StageState.Instance.IsPaused = false;
+        if(onHide != null)
+        {
+            onHide(this);
+        }
     }
 
     public void OnNextClicked()
