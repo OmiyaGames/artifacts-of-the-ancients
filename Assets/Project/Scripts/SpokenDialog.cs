@@ -123,6 +123,10 @@ public class SpokenDialog : IMenu
 
     public override void Hide()
     {
+        if (CurrentState == State.StandBy)
+        {
+            CurrentState = State.Visible;
+        }
         base.Hide();
         StageState.Instance.IsPaused = false;
         if(onHide != null)
