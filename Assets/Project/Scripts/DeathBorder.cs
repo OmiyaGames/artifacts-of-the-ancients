@@ -5,22 +5,42 @@ using System.Collections;
 [RequireComponent(typeof(BoxCollider2D))]
 public class DeathBorder : MonoBehaviour
 {
+    [SerializeField]
+    bool killOnTriggerEnter = true;
+
     bool isReady = true;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag(StageState.PlayerTag) == true)
         {
-            isReady = true;
+            if((killOnTriggerEnter == true) && (isReady == true))
+            {
+                isReady = false;
+                StageState.Instance.IsPaused = true;
+                Singleton.Get<MenuManager>().Show<SceneTransitionMenu>(OnShowComplete);
+            }
+            else if (killOnTriggerEnter == false)
+            {
+                isReady = true;
+            }
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if ((other.CompareTag(StageState.PlayerTag) == true) && (isReady == true))
+        if (other.CompareTag(StageState.PlayerTag) == true)
         {
-            StageState.Instance.IsPaused = true;
-            Singleton.Get<MenuManager>().Show<SceneTransitionMenu>(OnShowComplete);
+            if (killOnTriggerEnter == true)
+            {
+                isReady = true;
+            }
+            else if (isReady == true)
+            {
+                isReady = false;
+                StageState.Instance.IsPaused = true;
+                Singleton.Get<MenuManager>().Show<SceneTransitionMenu>(OnShowComplete);
+            }
         }
     }
 
@@ -44,7 +64,7 @@ public class DeathBorder : MonoBehaviour
     {
         if (((SceneTransitionMenu)menu).CurrentTransition == SceneTransitionMenu.Transition.SceneTransitionInEnd)
         {
-            isReady = false;
+            isReady = true;
         }
     }
 }
