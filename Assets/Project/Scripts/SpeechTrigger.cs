@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using OmiyaGames;
+using System.Collections;
 
 [RequireComponent(typeof(SpokenSpeech))]
 public class SpeechTrigger : ITriggers
@@ -15,6 +16,7 @@ public class SpeechTrigger : ITriggers
     [SerializeField]
     string uniqueId = "Speech.Text 01";
 
+    const float delayStartSpeech = 0.75f;
     bool startSpeech = false;
     System.Action<SpokenDialog> onHide = null;
     SpokenSpeech speechCache = null;
@@ -58,9 +60,10 @@ public class SpeechTrigger : ITriggers
         }
     }
 
-    void Start ()
+    IEnumerator Start ()
     {
         startSpeech = false;
+        yield return new WaitForSeconds(delayStartSpeech);
         if (triggerType == Type.StartTrigger)
         {
             StartDialog();
