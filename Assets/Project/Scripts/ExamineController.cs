@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using OmiyaGames;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -14,13 +15,24 @@ public class ExamineController : MonoBehaviour
             if ((flipStarted == false) &&
                 (StageState.Instance.Platformer.IsGrounded == true) &&
                 (StageState.Instance.IsPaused == false) &&
-                (StageState.Instance.CurrentActionOnFire1 == ITriggers.Action.Examine) &&
                 (CrossPlatformInputManager.GetButtonDown("Fire1") == true))
             {
-                SpeechTrigger trigger = StageState.Instance.CurrentTriggerOnFire1 as SpeechTrigger;
-                if(trigger != null)
+                switch(StageState.Instance.CurrentActionOnFire1)
                 {
-                    trigger.StartDialog();
+                    case ITriggers.Action.Examine:
+                        SpeechTrigger speechTrigger = StageState.Instance.CurrentTriggerOnFire1 as SpeechTrigger;
+                        if (speechTrigger != null)
+                        {
+                            speechTrigger.StartDialog();
+                        }
+                        break;
+                    case ITriggers.Action.Exit:
+                        ExitTrigger exitTrigger = StageState.Instance.CurrentTriggerOnFire1 as ExitTrigger;
+                        if (exitTrigger != null)
+                        {
+                            Singleton.Get<SceneTransitionManager>().LoadNextLevel();
+                        }
+                        break;
                 }
             }
         }
