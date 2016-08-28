@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 
 [DisallowMultipleComponent]
+[RequireComponent(typeof(Animator))]
 public class Portal : ITriggers
 {
+    // FIXME: remove these member variables
     [Header("Activate")]
     [SerializeField]
     GameObject[] activateOnRightSideUp;
     [SerializeField]
     GameObject[] activateOnUpsideDown;
 
+    // FIXME: remove these member variables
     [Header("Deactivate")]
     [SerializeField]
     GameObject[] deactivateOnRightSideUp;
@@ -21,6 +24,7 @@ public class Portal : ITriggers
     [SerializeField]
     Transform spawnPointOnUpsideDown;
 
+    Animator animatorCache = null;
     Vector3 finalSpawnPositionOnRightSideUp, finalSpawnPositionOnUpsideDown;
 
     public override Action ActionOnFire1
@@ -28,6 +32,18 @@ public class Portal : ITriggers
         get
         {
             return Action.Flip;
+        }
+    }
+
+    public Animator CachedAnimator
+    {
+        get
+        {
+            if(animatorCache == null)
+            {
+                animatorCache = GetComponent<Animator>();
+            }
+            return animatorCache;
         }
     }
 
