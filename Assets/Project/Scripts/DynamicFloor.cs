@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using Line2D;
 using System.Collections.Generic;
-using System;
 
 [DisallowMultipleComponent]
 [ExecuteInEditMode]
@@ -108,7 +107,6 @@ public class DynamicFloor : MonoBehaviour
         // Setup index
         int pIndex = 0;
         int bIndex = 0;
-        int cIndex = 0;
         bool addPoint = true;
 
         // Grab the first block (if there are any)
@@ -129,36 +127,31 @@ public class DynamicFloor : MonoBehaviour
                 // Grab the lower left corner from the block
                 GetBlockCorner(currentBlock, 0, isRightSideUp, onStart, out cornerPoint);
 
-                // FIXME: Check if the current point is a lot like a block's lower-left point
-                //if (IsCloseEnough(ref currentPoint, currentBlock.transform.position) == true)
-                if (cornerPoint.x < currentPoint.x)
+                // Check if the current point is a lot like a block's lower-left point
+                if (IsCloseEnough(ref currentPoint, cornerPoint) == true)
+                {
+                    // Skip currentPoint
+                    addPoint = false;
+
+                    // Skip the current point, in favor of the 2nd corner of the block
+                    AppendBlockCornersToList(isRightSideUp, onStart, ref bIndex, 1, ref currentBlock, out cornerPoint);
+                }
+                else if (cornerPoint.x < currentPoint.x)
                 {
                     // If instead, there's a block between the last 2 points
-                    // Add all the block points
-                    for(cIndex = 0; cIndex < (currentBlock.CornersClockwise.Length - 1); ++cIndex)
-                    {
-                        GetBlockCorner(currentBlock, cIndex, isRightSideUp, onStart, out cornerPoint);
-                        latestColliderPoints.Add(cornerPoint);
-                    }
+                    AppendBlockCornersToList(isRightSideUp, onStart, ref bIndex, 0, ref currentBlock, out cornerPoint);
 
-                    // Set the currentPoint to the last corner
-                    GetBlockCorner(currentBlock, (currentBlock.CornersClockwise.Length - 1), isRightSideUp, onStart, out cornerPoint);
-
-                    // FIXME: check if we should move onto the next block's lower left corner
-                    // Check if we should skip the currentPoint in favor of the last corner
+                    // Check if we should skip the currentPoint in favor of the last corner (since they're close enough)
                     if (IsCloseEnough(ref currentPoint, cornerPoint) == true)
                     {
+                        // Skip currrentPoint
                         addPoint = false;
-                        //currentPoint = cornerPoint;
                     }
                     else
                     {
+                        // Add the last corner point
                         latestColliderPoints.Add(cornerPoint);
                     }
-
-                    // Grab the next block (if there are any)
-                    ++bIndex;
-                    NextBlock(bIndex, isRightSideUp, out currentBlock);
                 }
             }
 
@@ -171,6 +164,31 @@ public class DynamicFloor : MonoBehaviour
 
         // Convert list into an array
         Collider.points = latestColliderPoints.ToArray();
+    }
+
+    private void AppendBlockCornersToList(bool isRightSideUp, bool onStart, ref int bIndex, int firstCorner, ref Block currentBlock, out Vector2 cornerPoint)
+    {
+        do
+        {
+            // Add all the block points
+            for (int cIndex = firstCorner; cIndex < (currentBlock.CornersClockwise.Length - 1); ++cIndex)
+            {
+                GetBlockCorner(currentBlock, cIndex, isRightSideUp, onStart, out cornerPoint);
+                latestColliderPoints.Add(cornerPoint);
+            }
+
+            // Set the currentPoint to the last corner
+            GetBlockCorner(currentBlock, (currentBlock.CornersClockwise.Length - 1), isRightSideUp, onStart, out cornerPoint);
+
+            // Grab the next block (if there are any)
+            ++bIndex;
+            NextBlock(bIndex, isRightSideUp, out currentBlock);
+
+            // FIXME: check if we should move onto the next block's lower left corner
+            // I'm looping only once for now
+            break;
+        }
+        while (currentBlock != null);
     }
 
     void UpdateGraphics()
