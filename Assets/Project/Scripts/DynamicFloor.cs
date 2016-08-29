@@ -9,7 +9,7 @@ using System;
 [RequireComponent(typeof(EdgeCollider2D))]
 public class DynamicFloor : MonoBehaviour
 {
-    const float DistanceCloseEnough = 0.001f;
+    const float DistanceCloseEnough = 0.1f;
 
     Line2DRenderer lineGraphic = null;
     EdgeCollider2D lineCollider = null;
@@ -109,6 +109,7 @@ public class DynamicFloor : MonoBehaviour
         int pIndex = 0;
         int bIndex = 0;
         int cIndex = 0;
+        bool addPoint = true;
 
         // Grab the first block (if there are any)
         Block currentBlock = null;
@@ -118,7 +119,11 @@ public class DynamicFloor : MonoBehaviour
         Vector2 currentPoint, cornerPoint;
         for (; pIndex < originalPoints.Length; ++pIndex)
         {
+            // Setup corner
+            addPoint = true;
             currentPoint = originalPoints[pIndex];
+
+            // Make sure we have a block
             if (currentBlock != null)
             {
                 // Grab the lower left corner from the block
@@ -141,21 +146,27 @@ public class DynamicFloor : MonoBehaviour
 
                     // FIXME: check if we should move onto the next block's lower left corner
                     // Check if we should skip the currentPoint in favor of the last corner
-                    //if (IsCloseEnough(ref currentPoint, cornerPoint) == true)
-                    //{
-                    //    currentPoint = cornerPoint;
-                    //}
-                    //else
-                    //{
+                    if (IsCloseEnough(ref currentPoint, cornerPoint) == true)
+                    {
+                        addPoint = false;
+                        //currentPoint = cornerPoint;
+                    }
+                    else
+                    {
                         latestColliderPoints.Add(cornerPoint);
-                    //}
+                    }
 
                     // Grab the next block (if there are any)
                     ++bIndex;
                     NextBlock(bIndex, isRightSideUp, out currentBlock);
                 }
             }
-            latestColliderPoints.Add(currentPoint);
+
+            // Add point
+            if (addPoint == true)
+            {
+                latestColliderPoints.Add(currentPoint);
+            }
         }
 
         // Convert list into an array
