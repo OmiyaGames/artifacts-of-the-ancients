@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000011058479818}
   - 50: {fileID: 50000012817279746}
   - 95: {fileID: 95000013582514400}
+  - 114: {fileID: 114000014020034808}
   m_Layer: 10
   m_Name: Pushable Block
   m_TagString: Untagged
@@ -39,6 +40,7 @@ GameObject:
   - 61: {fileID: 61000012559723848}
   - 61: {fileID: 61000013008038244}
   - 50: {fileID: 50000013731509332}
+  - 114: {fileID: 114000010757286880}
   m_Layer: 9
   m_Name: Player Detector
   m_TagString: Untagged
@@ -202,7 +204,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011638355780}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -212,6 +214,29 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010757286880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012179201784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc655b2d5badd04e94a1db2e2305642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 114000014020034808}
+--- !u!114 &114000014020034808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011638355780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913fe9abda4318d45b33d975f03f7e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000010756940390
 SpriteRenderer:
   m_ObjectHideFlags: 1
