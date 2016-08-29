@@ -37,6 +37,7 @@ GameObject:
   - 50: {fileID: 50000012817279746}
   - 95: {fileID: 95000013582514400}
   - 114: {fileID: 114000014020034808}
+  - 114: {fileID: 114000010883133348}
   m_Layer: 10
   m_Name: Pushable Block
   m_TagString: Untagged
@@ -422,9 +423,9 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011638355780}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8355a6711809d964ca7a654182b1f35b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -444,6 +445,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 114000014020034808}
+--- !u!114 &114000010883133348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011638355780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 141fe1a274e0a8c4fa4ca5d3b430736d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDisabledBoolField: Is Disabled?
 --- !u!114 &114000014020034808
 MonoBehaviour:
   m_ObjectHideFlags: 1

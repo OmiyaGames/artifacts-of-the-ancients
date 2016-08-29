@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Animator))]
 public class Block : ITriggers
 {
     public enum GrabCondition
@@ -18,7 +17,6 @@ public class Block : ITriggers
         Hidden
     }
 
-    Animator animator = null;
     Rigidbody2D body = null;
 
     [Header("IMPORTANT: Set these!")]
@@ -81,14 +79,6 @@ public class Block : ITriggers
         }
     }
 
-    public Animator Animator
-    {
-        get
-        {
-            return animator;
-        }
-    }
-
     public BlockCondition CurrentCondition
     {
         get
@@ -111,9 +101,6 @@ public class Block : ITriggers
                     inactiveColliders[index].gameObject.SetActive(currentCondition == BlockCondition.InActive);
                 }
                 Body.isKinematic = (currentCondition != BlockCondition.Active);
-
-                // FIXME: play some sort of animation
-                // Animator.SetBool(IsEnabled, Body.isKinematic);
             }
         }
     }
