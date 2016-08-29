@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using OmiyaGames;
 
 [RequireComponent(typeof(Animator))]
 public class AnimationDisabled : MonoBehaviour
@@ -8,13 +8,20 @@ public class AnimationDisabled : MonoBehaviour
     [SerializeField]
     string isDisabledBoolField = "Is Disabled?";
 
+    Animator animator;
+    bool isRightSideUpOnStart = true;
+
     // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void Start()
+    {
+        isRightSideUpOnStart = (transform.localScale.y > 0);
+        animator = GetComponent<Animator>();
+        StageState.Instance.onAfterFlipped += UpdateOnFlip;
+        UpdateOnFlip(StageState.Instance);
+    }
+
+    private void UpdateOnFlip(StageState obj)
+    {
+        animator.SetBool(isDisabledBoolField, (isRightSideUpOnStart != obj.IsRightSideUp));
+    }
 }
