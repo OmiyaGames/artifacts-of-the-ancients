@@ -79,6 +79,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012531825570
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013003427486}
+  - 61: {fileID: 61000011026984166}
+  m_Layer: 11
+  m_Name: Invisible Block Blocker (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1000012643601642
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +211,7 @@ Transform:
   m_Children:
   - {fileID: 4000011050563844}
   - {fileID: 4000013163720274}
+  - {fileID: 4000013003427486}
   m_Father: {fileID: 4000011058479818}
   m_RootOrder: 0
 --- !u!4 &4000011050563844
@@ -229,6 +246,19 @@ Transform:
   - {fileID: 4000013637650338}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &4000013003427486
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012531825570}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010839121268}
+  m_RootOrder: 2
 --- !u!4 &4000013140572444
 Transform:
   m_ObjectHideFlags: 1
@@ -329,6 +359,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.099377155}
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.0512462}
+--- !u!61 &61000011026984166
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012531825570}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 1.25}
 --- !u!61 &61000012298744388
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -421,6 +465,12 @@ MonoBehaviour:
   - {fileID: 4000010412519548}
   - {fileID: 4000013140572444}
   - {fileID: 4000013637650338}
+  activeColliders:
+  - {fileID: 61000010613241752}
+  - {fileID: 61000012298744388}
+  - {fileID: 61000012559723848}
+  inactiveColliders:
+  - {fileID: 61000011026984166}
 --- !u!212 &212000010756940390
 SpriteRenderer:
   m_ObjectHideFlags: 1
