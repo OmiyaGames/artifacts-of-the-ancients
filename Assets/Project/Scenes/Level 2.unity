@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44711852, g: 0.4973939, b: 0.5761551, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -290,109 +290,109 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1921083534}
   m_Script: {fileID: 11500000, guid: 4b8d18963cf15234d938f28fcba4180d, type: 3}
---- !u!1001 &324333750
+--- !u!1001 &197470405
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 2144417602}
     m_Modifications:
-    - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.size
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+    - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalPosition.x
       value: 46.52
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+    - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalPosition.y
       value: -0.09
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+    - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+    - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+    - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+    - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+    - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+    - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114000014008079284, guid: 8bf583177ff4eea40ab83edb177e2de5,
-        type: 2}
-      propertyPath: allToggles.Array.data[1]
-      value: 
-      objectReference: {fileID: 182312948}
-    - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
+    - target: {fileID: 1000013720566268, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
+      propertyPath: m_Name
+      value: Switch (One Way) (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
       value: <color=#40a040ff>*Bzzt*</color> The strange stone is beginning to glow
         again. I think if I bring it close to the NavLink... Yes! It's creating another
         electromagentic field!
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Careful, Doctor. There's a chance it may bring you back to the caves,
-        but what if it just sends you deeper into this alternate reality?
+      value: Careful, Sam. There's a chance it may bring you back to the caves, but
+        what if it just sends you deeper into this alternate reality?
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: I guess that's just a chance I'm going to have to take!
+      value: I guess that's just a chance I'm going to have to take.
       objectReference: {fileID: 0}
-    - target: {fileID: 1000014280765134, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
-      propertyPath: m_Name
-      value: Switch (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+    - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalScale.y
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 114000014008079284, guid: 8bf583177ff4eea40ab83edb177e2de5,
+    - target: {fileID: 114000014130529292, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allToggles.Array.data[1]
+      value: 
+      objectReference: {fileID: 182312948}
+    - target: {fileID: 114000014130529292, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: uniqueId
       value: Speech.Level02-Switch2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014130529292, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: popUpActionText
+      value: Examine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &324333751 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5,
-    type: 2}
-  m_PrefabInternal: {fileID: 324333750}
 --- !u!1001 &383186366
 Prefab:
   m_ObjectHideFlags: 0
@@ -1339,7 +1339,7 @@ Prefab:
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 171
+      value: 173.23944
       objectReference: {fileID: 0}
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
@@ -1349,7 +1349,7 @@ Prefab:
     - target: {fileID: 224000010601853050, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 191
+      value: 193.23944
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe89d7f3827a3e94e93a5aa7b2c21a99, type: 2}
@@ -2089,6 +2089,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eba9d7ddabff6f54da6f78c8bd197132, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1448906525 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119,
+    type: 2}
+  m_PrefabInternal: {fileID: 197470405}
 --- !u!1001 &1486183308
 Prefab:
   m_ObjectHideFlags: 0
@@ -2190,7 +2195,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114000014130529292, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
@@ -2210,19 +2215,19 @@ Prefab:
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: <color=#40a040ff>*Bzzt*</color> Assistant, I've run into a bigger problem!
+      value: <color=#40a040ff>*Bzzt*</color> Lucy, I've run into a bigger problem!
         Quite literally, actually. This ledge is too high for me to reach even with
         my thrusters!
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
@@ -2233,28 +2238,28 @@ Prefab:
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: Assistant, are you there? You were breaking up. Something is causing
-        interference with the NavLink. I'm going to increase the signal strength.
+      value: Lucy, are you there? You were breaking up. Something is causing interference
+        with the NavLink. I'm going to increase the signal strength.
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[3].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[3].speech
-      value: I can hear you now, Doctor. What happened?
+      value: I can hear you now, Sam. What happened?
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[4].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
@@ -2264,29 +2269,29 @@ Prefab:
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[5].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[5].speech
-      value: Doctor, what is happening? Doctor?
+      value: Sam, what is happening? Sam?
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[6].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[6].speech
-      value: I am fine, Assistant. It is quite strange, though, there is an odd metallic
+      value: I am fine, Lucy. It is quite strange, though... There is an odd metallic
         stone here that started to glow when I turned up the signal strength on the
         NavLink. It is like nothing I've ever seen before.
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[7].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
@@ -2297,18 +2302,18 @@ Prefab:
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[8].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[8].speech
-      value: I do not think so. I will take it back with me so we can study it further,
+      value: I don't think so. I'll take it back with me so we can study it further,
         however.
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[9].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
@@ -2318,24 +2323,24 @@ Prefab:
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[10].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[10].speech
-      value: Oh my! This is quite peculiar! Bringing the stone to close to the NavLink
+      value: Oh my! This is quite peculiar! Bringing the stone close to the NavLink
         is causing a field of...well, what appears to be electromagnetic radiation!
         I think it is best that I investigate this anomaly.
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[11].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[11].speech
-      value: Be careful, Doctor!
+      value: Be careful, Sam!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
@@ -2447,15 +2452,15 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 49.58
+      value: 22.74
       objectReference: {fileID: 0}
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.73
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2484,22 +2489,22 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Note
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: 4th-wall breaking joke goes here.
+      value: Lucy, can you hear me?
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: 4th Wall
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Wait a minute....
+      value: What's going on, Sam? Where are you?
       objectReference: {fileID: 0}
     - target: {fileID: 114000013597273012, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
@@ -2509,12 +2514,13 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].name
-      value: Spelunker
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: Let's pretend I flicked it.
+      value: I'm not sure... It looks like some kind of alternate dimension. Almost
+        like the world's been flipped inside-out!
       objectReference: {fileID: 0}
     - target: {fileID: 1000010201223626, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_Name
@@ -2522,7 +2528,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013597273012, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: popUpActionText
+      value: Contact Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].speech
+      value: Hurry back, Sam, it may not be safe!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
@@ -2611,7 +2632,7 @@ Transform:
   - {fileID: 1016540792}
   - {fileID: 522762920}
   - {fileID: 1486183309}
-  - {fileID: 324333751}
   - {fileID: 1066540546}
+  - {fileID: 1448906525}
   m_Father: {fileID: 936303446}
   m_RootOrder: 0

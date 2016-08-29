@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4469245, g: 0.49678487, b: 0.57508314, a: 1}
+  m_IndirectSpecularColor: {r: 0.44711852, g: 0.4973939, b: 0.5761551, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1793,7 +1793,7 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000010284234486, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1830,12 +1830,12 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Assistant
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: Likewise, doctor. See you soon.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
