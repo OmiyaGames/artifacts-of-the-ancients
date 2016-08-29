@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010528084712}
   - 50: {fileID: 50000012310767426}
-  - 232: {fileID: 232000010333980062}
+  - 231: {fileID: 231000010806753654}
   m_Layer: 0
   m_Name: Block-Dragging Joint
   m_TagString: Untagged
@@ -147,6 +147,7 @@ GameObject:
   - 114: {fileID: 114000012733381690}
   - 114: {fileID: 114000014145233248}
   - 114: {fileID: 114000012470343562}
+  - 114: {fileID: 114000012287729790}
   m_Layer: 0
   m_Name: Spelunker
   m_TagString: Player
@@ -457,6 +458,18 @@ MonoBehaviour:
     m_Bits: 1025
   m_RemainUnflipped: {fileID: 224000010805057776}
   k_GroundedRadius: 0.15
+--- !u!114 &114000012287729790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013091768762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2155bd20966a14f828861974989f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxJoint: {fileID: 231000010806753654}
 --- !u!114 &114000012470343562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -757,8 +770,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
---- !u!232 &232000010333980062
-DistanceJoint2D:
+--- !u!231 &231000010806753654
+SpringJoint2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -773,5 +786,6 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 9.019141
-  m_MaxDistanceOnly: 0
+  m_Distance: 1
+  m_DampingRatio: 0
+  m_Frequency: 100
