@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e39ef2c40383c4cf69143d908963a177
-timeCreated: 1472442556
+timeCreated: 1472484572
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -20,6 +20,22 @@ TextureImporter:
     21300026: Arch_anim_13
     21300028: Arch_anim_14
     21300030: Arch_anim_15
+    21300032: Arch_anim_16
+    21300034: Arch_anim_17
+    21300036: Arch_anim_18
+    21300038: Arch_anim_19
+    21300040: Arch_anim_20
+    21300042: Arch_anim_21
+    21300044: Arch_anim_22
+    21300046: Arch_anim_23
+    21300048: Arch_anim_24
+    21300050: Arch_anim_25
+    21300052: Arch_anim_26
+    21300054: Arch_anim_27
+    21300056: Arch_anim_28
+    21300058: Arch_anim_29
+    21300060: Arch_anim_30
+    21300062: Arch_anim_31
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
