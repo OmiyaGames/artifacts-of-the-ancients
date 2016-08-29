@@ -121,7 +121,7 @@ public class DynamicFloor : MonoBehaviour
                 if (currentBlock != null)
                 {
                     // Grab the lower left corner from the block
-                    cornerPoint = currentBlock.CornersClockwise[0].position;
+                    GetBlockCorner(currentBlock, 0, out cornerPoint);
 
                     // FIXME: Check if the current point is a lot like a block's lower-left point
                     //if (IsCloseEnough(ref currentPoint, currentBlock.transform.position) == true)
@@ -129,14 +129,14 @@ public class DynamicFloor : MonoBehaviour
                     {
                         // If instead, there's a block between the last 2 points
                         // Add all the block points
-                        for(cIndex = 0; cIndex < currentBlock.CornersClockwise.Length - 1; ++cIndex)
+                        for(cIndex = 0; cIndex < (currentBlock.CornersClockwise.Length - 1); ++cIndex)
                         {
-                            cornerPoint = currentBlock.CornersClockwise[cIndex].position;
+                            GetBlockCorner(currentBlock, cIndex, out cornerPoint);
                             latestColliderPoints.Add(cornerPoint);
                         }
 
                         // Set the currentPoint to the last corner
-                        cornerPoint = currentBlock.CornersClockwise[currentBlock.CornersClockwise.Length - 1].position;
+                        GetBlockCorner(currentBlock, (currentBlock.CornersClockwise.Length - 1), out cornerPoint);
 
                         // FIXME: check if we should move onto the next block's lower left corner
                         // Check if we should skip the currentPoint in favor of the last corner
@@ -184,15 +184,25 @@ public class DynamicFloor : MonoBehaviour
         {
             Graphic.points.RemoveAt(Graphic.points.Count - 1);
         }
+
+        if (Application.isPlaying == true)
+        {
+            Graphic.UpdateLineToNewPoints();
+        }
     }
 
-    void NextBlock(ref Block currentBlock, int bIndex)
+        void NextBlock(ref Block currentBlock, int bIndex)
     {
         currentBlock = null;
         if (bIndex < rightSideUpBlocks.Count)
         {
             currentBlock = rightSideUpBlocks[bIndex];
         }
+    }
+
+    void GetBlockCorner(Block currentBlock, int cIndex, out Vector2 cornerPoint)
+    {
+        cornerPoint =  currentBlock.CornersClockwise[cIndex].position - transform.position;
     }
 
     int BlockSorter(Block left, Block right)
