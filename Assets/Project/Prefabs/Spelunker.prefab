@@ -50,7 +50,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012937221186}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Shaft Light Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,6 +123,7 @@ GameObject:
   - 114: {fileID: 114000013960180786}
   - 114: {fileID: 114000010975257564}
   - 114: {fileID: 114000010567024662}
+  - 114: {fileID: 114000010817563804}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -373,7 +374,7 @@ MonoBehaviour:
   m_HistogramShader: {fileID: 4800000, guid: 9a8e838691462194482a43a02e424876, type: 3}
   histogramRefreshOnPlay: 1
   m_EyeAdaptation:
-    enabled: 0
+    enabled: 1
     middleGrey: 0.5
     min: -3
     max: 3
@@ -406,7 +407,7 @@ MonoBehaviour:
     neutralWhiteLevel: 5.3
     neutralWhiteClip: 10
   m_ColorGrading:
-    enabled: 1
+    enabled: 0
     precision: 16
     colorWheels:
       shadows: {r: 0.7780543, g: 1, b: 0.8870678, a: 1}
@@ -500,6 +501,29 @@ MonoBehaviour:
     texture: {fileID: 0}
     contribution: 1
   m_Shader: {fileID: 4800000, guid: 964b34bbab7f5e64fa40f37eaccac1ad, type: 3}
+--- !u!114 &114000010817563804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012914412216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6d4281e5d7cd44d8c6e38bc2c1b8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  intensity: 0.18
+  chromaticAberration: 0
+  axialAberration: 0.5
+  blur: 0
+  blurSpread: 0.75
+  luminanceDependency: 0.25
+  blurDistance: 2.5
+  vignetteShader: {fileID: 4800000, guid: 627943dc7a9a74286b70a4f694a0acd5, type: 3}
+  separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
+  chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
+    type: 3}
 --- !u!114 &114000010975257564
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -30,7 +30,7 @@ namespace Line2D
 		private MeshFilter meshFilter;
 		private Line2DMeshBuffer lineMeshBuffer;
 
-		void Start () 
+		void Awake () 
 		{
 			Init();
 
@@ -60,7 +60,7 @@ namespace Line2D
 
         public void UpdateLineToNewPoints()
         {
-            lineMeshBuffer.UpdateVertices(points, useWorldSpace, useStraightTangent, widthMultiplier);
+            UpdateCompleteLine();
             lineMeshBuffer.Apply();
         }
 
