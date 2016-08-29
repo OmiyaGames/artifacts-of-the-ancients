@@ -411,6 +411,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913fe9abda4318d45b33d975f03f7e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeMaterial: {fileID: 61000012298744388}
+  massOnGrab: 1
+  massOnLetGo: 100
+  materialOnGrab: {fileID: 6200000, guid: 18f6aaf30c866f84da81c18da0aa84ad, type: 2}
+  materialOnLetGo: {fileID: 6200000, guid: 4a49f732b0f00504380f76ef37e621cb, type: 2}
   cornersClockwise:
   - {fileID: 4000013399263246}
   - {fileID: 4000010412519548}

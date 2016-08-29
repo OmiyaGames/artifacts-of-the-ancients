@@ -14,16 +14,16 @@ public class Block : ITriggers
     Animator animator = null;
     Rigidbody2D body = null;
 
-    //[SerializeField]
-    //Collider2D changeMaterial;
+    [SerializeField]
+    Collider2D changeMaterial;
     [SerializeField]
     float massOnGrab = 1f;
     [SerializeField]
     float massOnLetGo = 100f;
-    //[SerializeField]
-    //PhysicsMaterial2D materialOnGrab;
-    //[SerializeField]
-    //PhysicsMaterial2D materialOnLetGo;
+    [SerializeField]
+    PhysicsMaterial2D materialOnGrab;
+    [SerializeField]
+    PhysicsMaterial2D materialOnLetGo;
     [SerializeField]
     Transform[] cornersClockwise = new Transform[4];
 
@@ -69,7 +69,7 @@ public class Block : ITriggers
         UpdateBody(StageState.Instance);
 
         Body.mass = massOnLetGo;
-        //changeMaterial.sharedMaterial = materialOnLetGo;
+        changeMaterial.sharedMaterial = materialOnLetGo;
     }
 
     void UpdateBody(StageState obj)
@@ -97,14 +97,14 @@ public class Block : ITriggers
             case GrabCondition.StartGrab:
                 StageState.Instance.RemoveTrigger(this);
                 Body.mass = massOnGrab;
-                //changeMaterial.sharedMaterial = materialOnGrab;
+                changeMaterial.sharedMaterial = materialOnGrab;
                 break;
             case GrabCondition.ManualLetGo:
                 //StageState.Instance.AddTrigger(this);
                 //goto case GrabCondition.AccidentLetGo;
             case GrabCondition.AccidentLetGo:
                 Body.mass = massOnLetGo;
-                //changeMaterial.sharedMaterial = materialOnLetGo;
+                changeMaterial.sharedMaterial = materialOnLetGo;
                 break;
         }
     }
