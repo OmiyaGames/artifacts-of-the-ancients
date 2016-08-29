@@ -9,6 +9,7 @@ public class BlockController : MonoBehaviour
     SpringJoint2D boxJoint;
 
     Block lastblock = null;
+    Vector2 blockVelocity = Vector2.zero;
 
     void Update()
     {
@@ -23,13 +24,22 @@ public class BlockController : MonoBehaviour
             }
             else if (StageState.Instance.Controller.IsCrouching == true)
             {
+                blockVelocity.x = 0;
+                blockVelocity.y = lastblock.Body.velocity.y;
                 if (StageState.Instance.Platformer.IsGrounded == false)
                 {
+                    lastblock.Body.velocity = blockVelocity;
                     SetCrouching(null, Block.GrabCondition.AccidentLetGo);
                 }
                 else if (CrossPlatformInputManager.GetButtonUp("Fire1") == true)
                 {
+                    lastblock.Body.velocity = blockVelocity;
                     SetCrouching(null, Block.GrabCondition.ManualLetGo);
+                }
+                else if(lastblock != null)
+                {
+                    blockVelocity.x = StageState.Instance.Platformer.IntendedVelocity.x;
+                    lastblock.Body.velocity = blockVelocity;
                 }
             }
         }
@@ -41,14 +51,14 @@ public class BlockController : MonoBehaviour
         bool flag = (blockTrigger != null);
 
         // Update flags
-        boxJoint.gameObject.SetActive(flag);
+        //boxJoint.gameObject.SetActive(flag);
         StageState.Instance.Controller.IsCrouching = flag;
 
         // make changes specific to flags
         if (flag == true)
         {
             // If crouching, connect the rigidbody
-            boxJoint.connectedBody = blockTrigger.Body;
+            //boxJoint.connectedBody = blockTrigger.Body;
 
             // Setup block
             blockTrigger.SetupBlock(reason);
@@ -57,7 +67,7 @@ public class BlockController : MonoBehaviour
         else
         {
             // If not crouching anymore, disconnect
-            boxJoint.connectedBody = null;
+            //boxJoint.connectedBody = null;
 
             // Setup block
             if (lastblock != null)
@@ -68,7 +78,6 @@ public class BlockController : MonoBehaviour
         }
 
         // Setup joint
-        boxJoint.autoConfigureConnectedAnchor = !flag;
-        boxJoint.autoConfigureDistance = !flag;
+        //boxJoint.autoConfigureDistance = !flag;
     }
 }
