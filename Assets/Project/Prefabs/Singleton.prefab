@@ -837,6 +837,11 @@ MonoBehaviour:
     cursorMode: 0
     cursorModeWeb: 0
     revertTimeScale: 1
+  - scenePath: Assets/Project/Scenes/Level 6.unity
+    displayName: Level 6
+    cursorMode: 0
+    cursorModeWeb: 0
+    revertTimeScale: 1
 --- !u!114 &11428920
 MonoBehaviour:
   m_ObjectHideFlags: 1
