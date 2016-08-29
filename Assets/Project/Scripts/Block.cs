@@ -21,6 +21,11 @@ public class Block : ITriggers
     Animator animator = null;
     Rigidbody2D body = null;
 
+    [Header("IMPORTANT: Set these!")]
+    [SerializeField]
+    DynamicFloor floorToAffect;
+
+    [Header("Block Properties")]
     [SerializeField]
     Collider2D changeMaterial;
     [SerializeField]
@@ -129,6 +134,14 @@ public class Block : ITriggers
             {
                 CurrentCondition = BlockCondition.Hidden;
             }
+        }
+    }
+
+    void Awake()
+    {
+        if(floorToAffect != null)
+        {
+            floorToAffect.AddBlock(this);
         }
     }
 
