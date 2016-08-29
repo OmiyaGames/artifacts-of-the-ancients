@@ -1137,6 +1137,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010284234486, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
       propertyPath: m_LocalPosition.x
       value: 28.58
