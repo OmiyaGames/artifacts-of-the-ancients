@@ -11,6 +11,13 @@ public class Block : ITriggers
         AccidentLetGo
     }
 
+    public enum BlockCondition
+    {
+        Active = 0,
+        InActive,
+        Hidden
+    }
+
     Animator animator = null;
     Rigidbody2D body = null;
 
@@ -26,6 +33,12 @@ public class Block : ITriggers
     PhysicsMaterial2D materialOnLetGo;
     [SerializeField]
     Transform[] cornersClockwise = new Transform[4];
+    [SerializeField]
+    Collider2D[] activeColliders;
+    [SerializeField]
+    Collider2D[] inactiveColliders;
+
+    BlockCondition currentCondition = BlockCondition.Active;
 
     public override Action ActionOnFire1
     {
@@ -55,6 +68,14 @@ public class Block : ITriggers
         }
     }
 
+    public Transform[] CornersClockwise
+    {
+        get
+        {
+            return cornersClockwise;
+        }
+    }
+
     public Animator Animator
     {
         get
@@ -63,10 +84,58 @@ public class Block : ITriggers
         }
     }
 
+    public BlockCondition CurrentCondition
+    {
+        get
+        {
+            return currentCondition;
+        }
+        private set
+        {
+            if (currentCondition != value)
+            {
+                currentCondition = value;
+
+                int index = 0;
+                for (; index < activeColliders.Length; ++index)
+                {
+                    activeColliders[index].gameObject.SetActive(currentCondition == BlockCondition.Active);
+                }
+                for (index = 0; index < inactiveColliders.Length; ++index)
+                {
+                    inactiveColliders[index].gameObject.SetActive(currentCondition == BlockCondition.InActive);
+                }
+                Body.isKinematic = (currentCondition != BlockCondition.Active);
+
+                // FIXME: play some sort of animation
+                // Animator.SetBool(IsEnabled, Body.isKinematic);
+            }
+        }
+    }
+
+    public bool IsVisible
+    {
+        get
+        {
+            return (CurrentCondition != BlockCondition.Hidden);
+        }
+        set
+        {
+            if((value == true) && (CurrentCondition == BlockCondition.Hidden))
+            {
+                MakeBodyVisible(StageState.Instance.IsRightSideUp);
+            }
+            else if ((value == false) && (CurrentCondition != BlockCondition.Hidden))
+            {
+                CurrentCondition = BlockCondition.Hidden;
+            }
+        }
+    }
+
     void Start()
     {
         StageState.Instance.onAfterFlipped += UpdateBody;
-        UpdateBody(StageState.Instance);
+        MakeBodyVisible(StageState.Instance.IsRightSideUp);
 
         Body.mass = massOnLetGo;
         changeMaterial.sharedMaterial = materialOnLetGo;
@@ -74,20 +143,26 @@ public class Block : ITriggers
 
     void UpdateBody(StageState obj)
     {
-        if((obj.IsRightSideUp == true) && (transform.localScale.y > 0))
+        if (currentCondition != BlockCondition.Hidden)
         {
-            Body.isKinematic = false;
+            MakeBodyVisible(obj.IsRightSideUp);
         }
-        else if ((obj.IsRightSideUp == false) && (transform.localScale.y < 0))
+    }
+
+    void MakeBodyVisible(bool rightSideUp)
+    {
+        if ((rightSideUp == true) && (transform.localScale.y > 0))
         {
-            Body.isKinematic = false;
+            CurrentCondition = BlockCondition.Active;
+        }
+        else if ((rightSideUp == false) && (transform.localScale.y < 0))
+        {
+            CurrentCondition = BlockCondition.Active;
         }
         else
         {
-            Body.isKinematic = true;
+            CurrentCondition = BlockCondition.InActive;
         }
-        // FIXME: play some sort of animation
-        // Animator.SetBool(IsEnabled, Body.isKinematic);
     }
 
     public void SetupBlock(GrabCondition isGrabbing)
@@ -100,8 +175,6 @@ public class Block : ITriggers
                 changeMaterial.sharedMaterial = materialOnGrab;
                 break;
             case GrabCondition.ManualLetGo:
-                //StageState.Instance.AddTrigger(this);
-                //goto case GrabCondition.AccidentLetGo;
             case GrabCondition.AccidentLetGo:
                 Body.mass = massOnLetGo;
                 changeMaterial.sharedMaterial = materialOnLetGo;
