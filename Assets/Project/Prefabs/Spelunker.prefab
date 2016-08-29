@@ -235,7 +235,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013091768762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.3, y: 2.45, z: 0}
+  m_LocalPosition: {x: 8.68, y: 2.45, z: 0}
   m_LocalScale: {x: 1.7715329, y: 1.7715304, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -310,12 +310,12 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0.053608265, y: -0.6139195}
-      - {x: 0.12138007, y: -0.43745524}
-      - {x: 0.1312983, y: 0.3360616}
-      - {x: -0.13013874, y: 0.3396882}
-      - {x: -0.13591075, y: -0.44236422}
-      - {x: -0.071542285, y: -0.6112076}
+    - - {x: 0.05, y: -0.6139195}
+      - {x: 0.192152, y: -0.43745524}
+      - {x: 0.192152, y: 0.4517446}
+      - {x: -0.24219434, y: 0.45174462}
+      - {x: -0.2421943, y: -0.44236404}
+      - {x: -0.08, y: -0.6139195}
 --- !u!81 &81000010880205146
 AudioListener:
   m_ObjectHideFlags: 1

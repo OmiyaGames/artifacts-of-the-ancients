@@ -58,27 +58,30 @@ public class DynamicFloor : MonoBehaviour
 
     void Start()
     {
-        // Populate original points
-        originalPoints = new Vector2[Collider.pointCount];
-        for (int index = 0; index < Collider.pointCount; ++index)
+        if (Application.isPlaying == true)
         {
-            originalPoints[index] = Collider.points[index];
-        }
+            // Populate original points
+            originalPoints = new Vector2[Collider.pointCount];
+            for (int index = 0; index < Collider.pointCount; ++index)
+            {
+                originalPoints[index] = Collider.points[index];
+            }
 
-        // Sort block list
-        if(rightSideUpBlocks.Count > 1)
-        {
-            rightSideUpBlocks.Sort(BlockSorter);
-        }
-        if (upsideDownBlocks.Count > 1)
-        {
-            upsideDownBlocks.Sort(BlockSorter);
-        }
+            // Sort block list
+            if (rightSideUpBlocks.Count > 1)
+            {
+                rightSideUpBlocks.Sort(BlockSorter);
+            }
+            if (upsideDownBlocks.Count > 1)
+            {
+                upsideDownBlocks.Sort(BlockSorter);
+            }
 
-        // Update this line
-        StageState.Instance.onAfterFlipped += UpdateAll;
-        UpdateCollider(StageState.Instance.IsRightSideUp, true);
-        UpdateGraphics();
+            // Update this line
+            StageState.Instance.onAfterFlipped += UpdateAll;
+            UpdateCollider(StageState.Instance.IsRightSideUp, true);
+            UpdateGraphics();
+        }
     }
 
 #if UNITY_EDITOR
@@ -199,12 +202,23 @@ public class DynamicFloor : MonoBehaviour
     void GetBlockCorner(Block currentBlock, int cIndex, bool isRightSideUp, bool onStart, out Vector2 cornerPoint)
     {
         cornerPoint = currentBlock.CornersClockwise[cIndex].position;
-        if((isRightSideUp == true) && (onStart == false))
+        if(isRightSideUp == true)
         {
-            cornerPoint.y *= -1f;
+            if (onStart == false)
+            {
+                cornerPoint.y *= -1f;
+                cornerPoint.y += transform.position.y;
+            }
+            else
+            {
+                cornerPoint.y -= transform.position.y;
+            }
+        }
+        else
+        {
+            cornerPoint.y -= transform.position.y;
         }
         cornerPoint.x -= transform.position.x;
-        cornerPoint.y -= transform.position.y;
     }
 
     int BlockSorter(Block left, Block right)
