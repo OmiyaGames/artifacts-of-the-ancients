@@ -198,11 +198,13 @@ public class DynamicFloor : MonoBehaviour
 
     void GetBlockCorner(Block currentBlock, int cIndex, bool isRightSideUp, bool onStart, out Vector2 cornerPoint)
     {
-        cornerPoint =  currentBlock.CornersClockwise[cIndex].position - transform.position;
+        cornerPoint = currentBlock.CornersClockwise[cIndex].position;
         if((isRightSideUp == true) && (onStart == false))
         {
             cornerPoint.y *= -1f;
         }
+        cornerPoint.x -= transform.position.x;
+        cornerPoint.y -= transform.position.y;
     }
 
     int BlockSorter(Block left, Block right)
