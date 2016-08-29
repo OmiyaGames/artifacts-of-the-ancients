@@ -6,7 +6,8 @@ using OmiyaGames;
 public class BlockController : MonoBehaviour
 {
     [SerializeField]
-    SpringJoint2D boxJoint;
+    [Range(0.9f, 1.1f)]
+    float xVelocityMultiplier = 1.01f;
 
     Block lastblock = null;
     Vector2 blockVelocity = Vector2.zero;
@@ -38,7 +39,7 @@ public class BlockController : MonoBehaviour
                 }
                 else if(lastblock != null)
                 {
-                    blockVelocity.x = StageState.Instance.Platformer.IntendedVelocity.x;
+                    blockVelocity.x = StageState.Instance.Platformer.IntendedVelocity.x * xVelocityMultiplier   ;
                     lastblock.Body.velocity = blockVelocity;
                 }
             }
@@ -51,15 +52,11 @@ public class BlockController : MonoBehaviour
         bool flag = (blockTrigger != null);
 
         // Update flags
-        //boxJoint.gameObject.SetActive(flag);
         StageState.Instance.Controller.IsCrouching = flag;
 
         // make changes specific to flags
         if (flag == true)
         {
-            // If crouching, connect the rigidbody
-            //boxJoint.connectedBody = blockTrigger.Body;
-
             // Setup block
             blockTrigger.SetupBlock(reason);
             lastblock = blockTrigger;
@@ -76,8 +73,5 @@ public class BlockController : MonoBehaviour
                 lastblock = null;
             }
         }
-
-        // Setup joint
-        //boxJoint.autoConfigureDistance = !flag;
     }
 }
