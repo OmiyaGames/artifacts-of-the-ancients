@@ -9,7 +9,8 @@ public class BlockPlayerDetector : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if ((other.CompareTag(StageState.PlayerTag) == true) &&
-            (StageState.Instance != null))
+            (StageState.Instance != null) &&
+            (parent.Body.isKinematic == false))
         {
             StageState.Instance.AddTrigger(parent);
         }

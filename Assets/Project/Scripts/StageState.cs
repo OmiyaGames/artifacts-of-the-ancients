@@ -179,7 +179,7 @@ public class StageState : MonoBehaviour
         get
         {
             bool returnFlag = false;
-            if((CurrentTriggerOnFire1 != null) && (string.IsNullOrEmpty(CurrentTriggerOnFire1.ActionText) == false) && (Platformer.IsGrounded == true) && (IsPaused == false))
+            if((CurrentTriggerOnFire1 != null) && (string.IsNullOrEmpty(CurrentTriggerOnFire1.ActionText) == false) && (Platformer.IsGrounded == true) && (IsPaused == false) && (Controller.IsCrouching == false))
             {
                 returnFlag = true;
             }
