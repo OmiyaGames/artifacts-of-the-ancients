@@ -106,7 +106,7 @@ EdgeCollider2D:
   m_GameObject: {fileID: 1000014069184574}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4a49f732b0f00504380f76ef37e621cb, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -124,7 +124,9 @@ EdgeCollider2D:
   - {x: 36.45317, y: 1.576755}
   - {x: 37.623142, y: 2.0811472}
   - {x: 38.393726, y: 0.22608793}
-  - {x: 47.5, y: 0.25}
+  - {x: 52.707817, y: 0.29974246}
+  - {x: 52.795788, y: 2.63379}
+  - {x: 62.113747, y: 2.6337895}
 --- !u!114 &114000010180202310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,7 +226,17 @@ MonoBehaviour:
     color:
       serializedVersion: 2
       rgba: 4294967295
-  - pos: {x: 47.5, y: 0.25, z: 0}
+  - pos: {x: 52.707817, y: 0.29974246, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 52.795788, y: 2.63379, z: 0}
+    width: 1
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+  - pos: {x: 62.113747, y: 2.6337895, z: 0}
     width: 1
     color:
       serializedVersion: 2
