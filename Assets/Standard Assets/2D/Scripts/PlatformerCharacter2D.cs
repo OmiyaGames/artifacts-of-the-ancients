@@ -106,18 +106,11 @@ namespace UnityStandardAssets._2D
                 // Make sure flipping is enabled
                 if (crouch == false)
                 {
-                    // If the input is moving the player right and the player is facing left...
-                    if (move > 0 && !m_FacingRight)
-                    {
-                        // ... flip the player.
-                        Flip();
-                    }
-                    // Otherwise if the input is moving the player left and the player is facing right...
-                    else if (move < 0 && m_FacingRight)
-                    {
-                        // ... flip the player.
-                        Flip();
-                    }
+                    UpdateFlip(move);
+                }
+                else
+                {
+                    UpdatePushPull(move);
                 }
             }
 
@@ -131,6 +124,41 @@ namespace UnityStandardAssets._2D
             }
         }
 
+        private void UpdateFlip(float move)
+        {
+            // If the input is moving the player right and the player is facing left...
+            if (move > 0 && !m_FacingRight)
+            {
+                // ... flip the player.
+                Flip();
+            }
+            // Otherwise if the input is moving the player left and the player is facing right...
+            else if (move < 0 && m_FacingRight)
+            {
+                // ... flip the player.
+                Flip();
+            }
+        }
+
+        private void UpdatePushPull(float move)
+        {
+            // If the input is moving the player right and the player is facing left...
+            if (move > 0 && !m_FacingRight)
+            {
+                // ... flip the player.
+                m_Anim.SetBool("Pulling", true);
+            }
+            // Otherwise if the input is moving the player left and the player is facing right...
+            else if (move < 0 && m_FacingRight)
+            {
+                // ... flip the player.
+                m_Anim.SetBool("Pulling", true);
+            }
+            else
+            {
+                m_Anim.SetBool("Pulling", false);
+            }
+        }
 
         private void Flip()
         {
