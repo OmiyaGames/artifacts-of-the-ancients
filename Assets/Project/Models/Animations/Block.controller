@@ -413,15 +413,9 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Switch (One-Way)
+  m_Name: Block
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Is This On?
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 1
-    m_Controller: {fileID: 0}
   - m_Name: Is Disabled?
     m_Type: 4
     m_DefaultFloat: 0
@@ -449,7 +443,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Is This On?
+    m_ConditionEvent: Is Disabled?
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110205230}
@@ -473,7 +467,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Is This On?
+    m_ConditionEvent: Is Disabled?
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110207700}
@@ -508,7 +502,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 042efcdd9b7a05a4ea016398b1252e5e, type: 2}
+  m_Motion: {fileID: 7456064}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
