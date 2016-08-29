@@ -36,10 +36,6 @@ public class Block : ITriggers
     PhysicsMaterial2D materialOnLetGo;
     [SerializeField]
     Transform[] cornersClockwise = new Transform[4];
-    [SerializeField]
-    Collider2D[] activeColliders;
-    [SerializeField]
-    Collider2D[] inactiveColliders;
 
     BlockCondition currentCondition = BlockCondition.Active;
 
@@ -90,16 +86,6 @@ public class Block : ITriggers
             if (currentCondition != value)
             {
                 currentCondition = value;
-
-                int index = 0;
-                for (; index < activeColliders.Length; ++index)
-                {
-                    activeColliders[index].gameObject.SetActive(currentCondition == BlockCondition.Active);
-                }
-                for (index = 0; index < inactiveColliders.Length; ++index)
-                {
-                    inactiveColliders[index].gameObject.SetActive(currentCondition == BlockCondition.InActive);
-                }
                 Body.isKinematic = (currentCondition != BlockCondition.Active);
             }
         }
