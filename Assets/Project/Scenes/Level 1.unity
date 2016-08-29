@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44711852, g: 0.4973939, b: 0.5761551, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -776,22 +776,23 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: Great Scott! I think we may have found it!
+      value: <color=#40a040ff>*Bzzt*</color> Great Scott! I think we may have found
+        it!
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Do you really think so, doctor?
+      value: Do you really think so?
       objectReference: {fileID: 0}
     - target: {fileID: 114000013410041162, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
@@ -801,44 +802,44 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: Yes, assistant. If my theory is correct, this may just be the long-lost
-        ruins we've been searching for.
+      value: Yes, Lucy. If my theory is correct, this may just be the long-lost ruins
+        we've been searching for!
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[3].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[3].speech
-      value: Wonderful! I will set up camp outside the site. Please contact me via
-        the headset if you need anything.
+      value: Wonderful! I will stay out here and secure the campsite. Please continue
+        to contact me via the NavLink if you need anything.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[4].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[4].speech
-      value: Sounds like a plan. Good luck, assistant. I will keep in touch.
+      value: Sounds like a plan. Good luck, Lucy. I'll keep in touch.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[5].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[5].speech
-      value: Likewise, doctor. See you soon.
+      value: Likewise, Sam. See you soon.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
@@ -1232,18 +1233,18 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: <color=#40a040ff>*Bzzt*</color> Assistant, I think I've encountered a
-        problem. There is a ledge here that is way too high for me to traverse.
+      value: <color=#40a040ff>*Bzzt*</color> I think I've encountered a problem, Lucy.
+        There is a ledge here that is way too high for me to traverse.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
@@ -1260,22 +1261,27 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].name
-      value: Doctor
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: Haha! Yes, I did. Thank you for the reminder, assistant.
+      value: Haha! Yes, I did. Thank you for the reminder, Lucy.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[3].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[3].speech
-      value: Anytime, doctor. That's what I'm here for.
+      value: Anytime, Sam. That's what I'm here for.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013597273012, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: popUpActionText
+      value: Contact Lucy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
