@@ -135,6 +135,9 @@ public class DynamicFloor : MonoBehaviour
 
                     // Skip the current point, in favor of the 2nd corner of the block
                     AppendBlockCornersToList(isRightSideUp, onStart, ref bIndex, 1, ref currentBlock, out cornerPoint);
+
+                    // Add the last corner point
+                    latestColliderPoints.Add(cornerPoint);
                 }
                 else if (cornerPoint.x < currentPoint.x)
                 {
