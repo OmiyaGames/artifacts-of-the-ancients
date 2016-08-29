@@ -8,7 +8,7 @@ public class AnimationToggle : IToggle
     [SerializeField]
     bool oneWayToggle = false;
 
-    [Header("Programmger Info")]
+    [Header("Programmer Info")]
     [SerializeField]
     string isOnBoolField = "Is This On?";
 
