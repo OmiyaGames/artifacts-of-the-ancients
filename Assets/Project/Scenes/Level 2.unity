@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44711852, g: 0.4973939, b: 0.5761551, a: 1}
+  m_IndirectSpecularColor: {r: 0.4469245, g: 0.49678487, b: 0.57508314, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -449,11 +449,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 32.47
+      value: 32.41
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.09
+      value: 4.16
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -469,11 +469,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.06874024
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9976346
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_RootOrder
@@ -481,15 +481,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalScale.y
-      value: -2
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1000010245747456, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_Name
       value: Death Spikes (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -7.6710005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
@@ -1330,7 +1334,7 @@ Prefab:
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 173.23944
+      value: 171
       objectReference: {fileID: 0}
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
@@ -1340,7 +1344,7 @@ Prefab:
     - target: {fileID: 224000010601853050, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 193.23944
+      value: 191
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe89d7f3827a3e94e93a5aa7b2c21a99, type: 2}
@@ -1566,7 +1570,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 29.64
+      value: 29.56
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1595,14 +1599,6 @@ Prefab:
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
@@ -2079,11 +2075,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 25.84
+      value: 25.88
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.76
+      value: 6.68
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2111,11 +2107,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalScale.y
-      value: -2
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1000010245747456, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_Name
@@ -2474,11 +2470,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 26.92
+      value: 26.88
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.07
+      value: 6.69
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2506,11 +2502,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011305293470, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_LocalScale.y
-      value: -2
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1000010245747456, guid: 2cb7000dc5803c246976fcea496810bb, type: 2}
       propertyPath: m_Name
