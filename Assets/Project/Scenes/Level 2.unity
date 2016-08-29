@@ -300,7 +300,7 @@ Prefab:
     - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000012295056928, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
       propertyPath: m_LocalPosition.x
@@ -342,32 +342,35 @@ Prefab:
     - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Spelunker
+      value: Doctor
       objectReference: {fileID: 0}
     - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: Let's pretend I flicked it.
+      value: <color=#40a040ff>*Bzzt*</color> The strange stone is beginning to glow
+        again. I think if I bring it close to the NavLink... Yes! It's creating another
+        electromagentic field!
       objectReference: {fileID: 0}
     - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: Spelunker
+      value: Assistant
       objectReference: {fileID: 0}
     - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Let's pretend I flicked it.
+      value: Careful, Doctor. There's a chance it may bring you back to the caves,
+        but what if it just sends you deeper into this alternate reality?
       objectReference: {fileID: 0}
     - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].name
-      value: Spelunker
+      value: Doctor
       objectReference: {fileID: 0}
     - target: {fileID: 114000012142491286, guid: 8bf583177ff4eea40ab83edb177e2de5,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: Let's pretend I flicked it.
+      value: I guess that's just a chance I'm going to have to take!
       objectReference: {fileID: 0}
     - target: {fileID: 1000014280765134, guid: 8bf583177ff4eea40ab83edb177e2de5, type: 2}
       propertyPath: m_Name
