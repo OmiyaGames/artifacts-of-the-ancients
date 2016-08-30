@@ -1522,8 +1522,9 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Isn't it strange, Sam? Just imagine how many wars have been fought on
-        these very sands and nobody knew what existed just below their feet.
+      value: Isn't it strange, Sam? Just imagine how many wars have been fought over
+        the last few centuries on these very sands and nobody knew what existed just
+        below their feet.
       objectReference: {fileID: 0}
     - target: {fileID: 114000013410041162, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
