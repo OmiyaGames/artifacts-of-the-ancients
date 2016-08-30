@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44711852, g: 0.4973939, b: 0.5761551, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -353,6 +353,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2144417602}
     m_Modifications:
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.size
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalPosition.x
       value: 9.93
@@ -402,6 +407,198 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[0].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[0].speech
+      value: <color=#40a040ff>*Bzzt*</color> Lucy, are you there? I think I've found
+        it! I looks to be an old computer, circa 21st century!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[1].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[1].speech
+      value: How is that possible? That thing has been buried down there for over
+        500 years?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[2].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[2].speech
+      value: It looks like it. There is a stack of optical discs sitting next to it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].speech
+      value: Optical Discs? What are those?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[4].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[4].speech
+      value: Long before the government took control of the cloud and made it mandatory
+        for people to use it, the cloud used to be owned an operated by businesses.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[5].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[5].speech
+      value: They created the cloud and digital distribution in order to take ownership
+        of people's data. People could now access it, but could never truly own it.
+        You see, before the cloud, people used to own their data and would archieve
+        them on these optical discs for safe keeping.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[6].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[6].speech
+      value: It looks like there's an disc in the machine. I'm turning it on.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[7].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[7].speech
+      value: Oh my! It cannot be!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[8].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[8].speech
+      value: What is it, Sam, what do you see?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[9].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[9].speech
+      value: A document scan. The original, unabridged version!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[10].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[10].speech
+      value: Of what? What is it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[11].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[11].speech
+      value: Some would call it a myth or a legend. Some would call it a fairytale
+        that people believe to help them sleep at night. I call it history.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[12].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[12].speech
+      value: What does it say?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[13].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[13].speech
+      value: '"We the People of the United States, in Order to form a more perfect
+        Union, establish Justice, insure domestic Tranquility, provide for the common
+        defence, promote the general Welfare, and secure the..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[14].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[14].speech
+      value: I don't understand...
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[15].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[15].speech
+      value: '"Congress shall make no law respecting an establishment of religion,
+        or prohibiting the free exercise thereof; or abridging the freedom of speech,
+        or of the press; or the right of the people peaceably to assemble, and to
+        petition the Government for a redress of grievances."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[16].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[16].speech
+      value: What does that mean? What is it, Sam?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[17].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[17].speech
+      value: Salvation.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
@@ -1056,7 +1253,7 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000010284234486, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1098,8 +1295,8 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: <color=#40a040ff>*Bzzt*</color> Great Scott! I think we may have found
-        it!
+      value: <color=#40a040ff>*Bzzt*</color> It's an office! Buried deep down here
+        in what looks to be an old fallout shelter!
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
@@ -1109,7 +1306,7 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Do you really think so?
+      value: Do you see anything of importance?
       objectReference: {fileID: 0}
     - target: {fileID: 114000013410041162, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
@@ -1124,8 +1321,7 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: Yes, Lucy. If my theory is correct, this may just be the long-lost ruins
-        we've been searching for!
+      value: I believe I do.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
