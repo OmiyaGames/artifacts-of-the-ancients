@@ -216,6 +216,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 224000010022292106, guid: 817f1206bc7655943a0f93405eee545f,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000010022292106, guid: 817f1206bc7655943a0f93405eee545f,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000010022292106, guid: 817f1206bc7655943a0f93405eee545f,
+        type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 817f1206bc7655943a0f93405eee545f, type: 2}
   m_IsPrefabParent: 0
@@ -1282,6 +1297,11 @@ Prefab:
         type: 2}
       propertyPath: popUpActionText
       value: Contact Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000013034813398, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}

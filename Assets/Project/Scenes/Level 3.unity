@@ -1793,7 +1793,7 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010284234486, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2135,7 +2135,7 @@ Prefab:
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 171
+      value: 173.23944
       objectReference: {fileID: 0}
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
@@ -2145,7 +2145,7 @@ Prefab:
     - target: {fileID: 224000010601853050, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 191
+      value: 193.23944
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe89d7f3827a3e94e93a5aa7b2c21a99, type: 2}
@@ -2523,7 +2523,7 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2560,23 +2560,25 @@ Prefab:
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Assistant
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: Move a block by grabbing it (hold Down arrow key or S), and press Left
-        or Right (or A or D).
+      value: I found something interesting, Lucy. A huge crate of some sort.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Anytime, doctor. That's what I'm here for.
+      value: That should be easy for you, Sam. Simply move a crate by grabbing it
+        with the <color=#ffff00ff>Down Arrow Key</color> or <color=#ffff00ff>S</color>),
+        and press <<color=#ffff00ff>Left</color> or <color=#ffff00ff>Right</color>
+        (or A or D).
       objectReference: {fileID: 0}
     - target: {fileID: 114000013597273012, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
@@ -2602,6 +2604,11 @@ Prefab:
         type: 2}
       propertyPath: allSpeeches.Array.data[3].speech
       value: Anytime, doctor. That's what I'm here for.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013597273012, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: popUpActionText
+      value: Contact Lucy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}

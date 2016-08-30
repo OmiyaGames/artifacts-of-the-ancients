@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44711852, g: 0.4973939, b: 0.5761551, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1469,7 +1469,7 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000010284234486, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1506,22 +1506,24 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Assistant
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: Likewise, doctor. See you soon.
+      value: <color=#40a040ff>*Bzzt*</color> I think I'm getting closer, Lucy. These
+        portals seem to be showing up more frequently now.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: Assistant
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: Likewise, doctor. See you soon.
+      value: Isn't it strange, Sam? Just imagine how many wars have been fought on
+        these very sands and nobody knew what existed just below their feet.
       objectReference: {fileID: 0}
     - target: {fileID: 114000013410041162, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
@@ -1531,12 +1533,12 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].name
-      value: Assistant
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: Likewise, doctor. See you soon.
+      value: It's quite amazing. Hopefully we find what we're looking for down here.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}

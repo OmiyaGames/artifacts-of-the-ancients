@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44711852, g: 0.4973939, b: 0.5761551, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1908,7 +1908,7 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4000010284234486, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1945,22 +1945,23 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].name
-      value: Assistant
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[0].speech
-      value: Things are about to get dangerous.
+      value: <color=#40a040ff>*Bzzt*</color> Lucy, are you there?
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].name
-      value: Spelunker
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
-      value: I'm born prepared.
+      value: Sam, I ca<color=#40a040ff>*Bzzt*</color>n't hear yo<color=#40a040ff>*Bzzt*</color>u
+        very we...
       objectReference: {fileID: 0}
     - target: {fileID: 114000013410041162, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
@@ -1971,6 +1972,69 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[2].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[2].speech
+      value: Lucy? Lucy, are you there?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[3].speech
+      value: Now, I can hear you. What happened?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[4].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[4].speech
+      value: I guess the further down I go, the more difficult it is to stay in touch.
+        I've had to boost the signal strength once more.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[5].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[5].speech
+      value: Be careful, Sam! The more you boost the signal, the harder it will be
+        to stay off the grid. It will be double-plus ungood if the government finds
+        us now!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[6].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[6].speech
+      value: Haha! Keep that sense of humor, Lucy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[7].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[7].speech
+      value: And keep on your toes, I'm not joking around!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cb66aa51495c5a448ab2b004a0e4f76, type: 2}
