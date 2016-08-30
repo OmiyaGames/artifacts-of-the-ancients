@@ -2135,7 +2135,7 @@ Prefab:
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 173.23944
+      value: 168.49315
       objectReference: {fileID: 0}
     - target: {fileID: 224000013479232300, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
@@ -2145,7 +2145,7 @@ Prefab:
     - target: {fileID: 224000010601853050, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 193.23944
+      value: 188.49315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe89d7f3827a3e94e93a5aa7b2c21a99, type: 2}
@@ -2155,107 +2155,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000013091981328, guid: fe89d7f3827a3e94e93a5aa7b2c21a99,
     type: 2}
   m_PrefabInternal: {fileID: 786853207}
---- !u!1001 &805805702
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2144417602}
-    m_Modifications:
-    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: allSpeeches.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 22.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 6.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[0].name
-      value: Assistant
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[0].speech
-      value: Derp
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[1].name
-      value: Assistant
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[1].speech
-      value: Anytime, doctor. That's what I'm here for.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013597273012, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: uniqueId
-      value: Speech.Level03-Joke1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[2].name
-      value: Assistant
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[2].speech
-      value: Anytime, doctor. That's what I'm here for.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[3].name
-      value: Assistant
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010687260690, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[3].speech
-      value: Anytime, doctor. That's what I'm here for.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010201223626, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-      propertyPath: m_Name
-      value: Tablet (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &805805703 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f,
-    type: 2}
-  m_PrefabInternal: {fileID: 805805702}
 --- !u!1001 &852035826
 Prefab:
   m_ObjectHideFlags: 0
@@ -2464,7 +2363,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.8
+      value: 9.56
       objectReference: {fileID: 0}
     - target: {fileID: 4000012762310466, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2546,6 +2445,11 @@ Prefab:
         type: 2}
       propertyPath: popUpActionText
       value: Contact Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000013034813398, guid: e55c8ea22d3ab884a884d9b763e8d19f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e55c8ea22d3ab884a884d9b763e8d19f, type: 2}
@@ -2702,7 +2606,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012809203122, guid: 5c740dd72f3deeb4d9d685e502a89f87, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c740dd72f3deeb4d9d685e502a89f87, type: 2}
@@ -3529,7 +3433,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010300239476, guid: 1eda743653deec9459546616186ecf5a, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eda743653deec9459546616186ecf5a, type: 2}
@@ -3942,7 +3846,6 @@ Transform:
   - {fileID: 1386427712}
   - {fileID: 466331363}
   - {fileID: 1747910665}
-  - {fileID: 805805703}
   - {fileID: 1718417511}
   - {fileID: 1106683734}
   m_Father: {fileID: 936303446}
