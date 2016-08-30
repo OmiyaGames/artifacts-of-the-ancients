@@ -18,6 +18,7 @@ public class DeathBorder : MonoBehaviour
             {
                 isReady = false;
                 StageState.Instance.IsPaused = true;
+                StageState.Instance.PlayDeathSoundEffect();
                 Singleton.Get<MenuManager>().Show<SceneTransitionMenu>(OnShowComplete);
             }
             else if (killOnTriggerEnter == false)
@@ -39,6 +40,7 @@ public class DeathBorder : MonoBehaviour
             {
                 isReady = false;
                 StageState.Instance.IsPaused = true;
+                StageState.Instance.PlayDeathSoundEffect();
                 Singleton.Get<MenuManager>().Show<SceneTransitionMenu>(OnShowComplete);
             }
         }

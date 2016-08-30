@@ -291,7 +291,11 @@ public class StageState : MonoBehaviour
         {
             transform.position = startPosition;
         }
-        if(death != null)
+    }
+
+    public void PlayDeathSoundEffect()
+    {
+        if (death != null)
         {
             death.Play();
         }
