@@ -2,7 +2,7 @@
 using UnityStandardAssets._2D;
 using System.Collections.Generic;
 using OmiyaGames;
-using System;
+using UnityStandardAssets.ImageEffects;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(PlatformerCharacter2D))]
@@ -32,6 +32,10 @@ public class StageState : MonoBehaviour
     [SerializeField]
     SoundEffect death = null;
 
+    [Header("Image Effects")]
+    [SerializeField]
+    SunShafts disableEffectOnWebGl = null;
+
     PlatformerCharacter2D platformer = null;
     Platformer2DUserControl controller = null;
     bool isRightSideUp = true, isPaused = false,
@@ -51,6 +55,11 @@ public class StageState : MonoBehaviour
         characterAnimation = GetComponent<Animator>();
         startPosition = transform.position;
         cameraTransform.SetParent(null);
+
+        if(Singleton.Instance.IsWebplayer == true)
+        {
+            disableEffectOnWebGl.enabled = false;
+        }
 
         Platformer.onHoldCrate += OnHoldCrate;
         Platformer.onJump += OnJump;
