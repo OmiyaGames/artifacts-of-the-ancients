@@ -6,6 +6,10 @@ using OmiyaGames;
 [RequireComponent(typeof(Rigidbody2D))]
 public class ExamineController : MonoBehaviour
 {
+    [Header("Sound")]
+    [SerializeField]
+    SoundEffect action = null;
+
     void Update()
     {
         if ((StageState.Instance != null) &&
@@ -19,6 +23,7 @@ public class ExamineController : MonoBehaviour
                     if (speechTrigger != null)
                     {
                         speechTrigger.StartDialog();
+                        action.Play();
                     }
                     break;
                 case ITriggers.Action.Exit:
