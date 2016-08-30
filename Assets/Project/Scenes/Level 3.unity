@@ -2576,9 +2576,9 @@ Prefab:
         type: 2}
       propertyPath: allSpeeches.Array.data[1].speech
       value: That should be easy for you, Sam. Simply move a crate by grabbing it
-        with the <color=#ffff00ff>Down Arrow Key</color> or <color=#ffff00ff>S</color>),
-        and press <<color=#ffff00ff>Left</color> or <color=#ffff00ff>Right</color>
-        (or A or D).
+        with the <color=#ffff00ff>Down Arrow Key</color> or <color=#ffff00ff>S</color>,
+        and press <color=#ffff00ff>Left</color> or <color=#ffff00ff>Right</color>
+        (or <color=#ffff00ff>A</color> or <color=#ffff00ff>D</color>).
       objectReference: {fileID: 0}
     - target: {fileID: 114000013597273012, guid: e55c8ea22d3ab884a884d9b763e8d19f,
         type: 2}
