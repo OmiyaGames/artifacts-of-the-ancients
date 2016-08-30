@@ -1910,6 +1910,7 @@ MonoBehaviour:
   jump: {fileID: 114000013098244574}
   drag: {fileID: 114000012518067432}
   death: {fileID: 114000012125795934}
+  disableEffectOnWebGl: {fileID: 114000010314647970}
 --- !u!114 &114000012819991256
 MonoBehaviour:
   m_ObjectHideFlags: 1
