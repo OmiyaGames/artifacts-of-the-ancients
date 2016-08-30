@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using OmiyaGames;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -7,6 +8,9 @@ public class FlipperController : MonoBehaviour
 {
     [SerializeField]
     float lerpSpeed = 20f;
+    [Header("Sound")]
+    [SerializeField]
+    SoundEffect action = null;
 
     bool flipStarted = false;
 
@@ -27,6 +31,7 @@ public class FlipperController : MonoBehaviour
             {
                 StageState.Instance.ToggleFlip();
                 WorldFlipper.Instance.ExecuteFlip(StageState.Instance.IsRightSideUp);
+                action.Play();
                 flipStarted = true;
             }
             else if (flipStarted == true)
