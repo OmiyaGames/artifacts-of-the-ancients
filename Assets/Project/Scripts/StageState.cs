@@ -2,6 +2,7 @@
 using UnityStandardAssets._2D;
 using System.Collections.Generic;
 using OmiyaGames;
+using System;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(PlatformerCharacter2D))]
@@ -18,6 +19,18 @@ public class StageState : MonoBehaviour
     Transform cameraTransform = null;
     [SerializeField]
     UnityEngine.UI.Text popUpLabel = null;
+
+    [Header("Sound")]
+    [SerializeField]
+    SoundEffect footstep = null;
+    [SerializeField]
+    SoundEffect land = null;
+    [SerializeField]
+    SoundEffect jump = null;
+    [SerializeField]
+    SoundEffect drag = null;
+    [SerializeField]
+    SoundEffect death = null;
 
     PlatformerCharacter2D platformer = null;
     Platformer2DUserControl controller = null;
@@ -39,8 +52,53 @@ public class StageState : MonoBehaviour
         startPosition = transform.position;
         cameraTransform.SetParent(null);
 
+        Platformer.onHoldCrate += OnHoldCrate;
+        Platformer.onJump += OnJump;
+        Platformer.onLand += OnLand;
+        Platformer.onWalk += OnWalk;
+        
         // Set instance last
         instance = this;
+    }
+
+    private void OnWalk(PlatformerCharacter2D obj)
+    {
+        if(footstep != null)
+        {
+            footstep.Play();
+        }
+    }
+
+    private void OnLand(PlatformerCharacter2D obj)
+    {
+        if (land != null)
+        {
+            land.Play();
+        }
+    }
+
+    private void OnJump(PlatformerCharacter2D obj)
+    {
+        if (jump != null)
+        {
+            jump.Play();
+        }
+    }
+
+    private void OnHoldCrate(PlatformerCharacter2D obj, bool isGrabbing)
+    {
+        if (drag != null)
+        {
+            bool playSound = (isGrabbing == true) && (Mathf.Abs(obj.IntendedVelocity.x) > 0.01f);
+            if ((playSound == true) && (drag.CurrentState == IAudio.State.Stopped))
+            {
+                drag.Play();
+            }
+            else if ((playSound == false) && (drag.CurrentState == IAudio.State.Playing))
+            {
+                drag.CurrentState = IAudio.State.Stopped;
+            }
+        }
     }
 
     void OnDestroy()
@@ -232,6 +290,10 @@ public class StageState : MonoBehaviour
         else
         {
             transform.position = startPosition;
+        }
+        if(death != null)
+        {
+            death.Play();
         }
     }
 
