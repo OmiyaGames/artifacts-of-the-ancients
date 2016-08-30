@@ -556,6 +556,6 @@ PlayerSettings:
   iOS::VR::enabledDevices: []
   tvOS::VR::enabledDevices: []
   cloudProjectId: 725ae0d5-194a-4e33-a36c-b690a40ce73d
-  projectName: Template Project
+  projectName: Artifact of the Ancients
   organizationId: japtar10101
   cloudEnabled: 0
