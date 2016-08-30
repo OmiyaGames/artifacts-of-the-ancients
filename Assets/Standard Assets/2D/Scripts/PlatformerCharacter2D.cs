@@ -5,6 +5,11 @@ namespace UnityStandardAssets._2D
 {
     public class PlatformerCharacter2D : MonoBehaviour
     {
+        public Action<PlatformerCharacter2D> onWalk;
+        public Action<PlatformerCharacter2D> onJump;
+        public Action<PlatformerCharacter2D> onLand;
+        public Action<PlatformerCharacter2D, bool> onHoldCrate;
+
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -22,6 +27,7 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
         private Vector2 intendedVelocity = Vector2.zero;
+        private bool m_wasOnGround = true;  // For determining which way the player is currently facing.
 
         private void Awake()
         {
@@ -32,9 +38,9 @@ namespace UnityStandardAssets._2D
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
-
         private void FixedUpdate()
         {
+            m_wasOnGround = m_Grounded;
             m_Grounded = false;
 
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
@@ -43,7 +49,14 @@ namespace UnityStandardAssets._2D
             for (int i = 0; i < colliders.Length; i++)
             {
                 if (colliders[i].gameObject != gameObject)
+                {
                     m_Grounded = true;
+                    if((m_wasOnGround == false) && (onLand != null))
+                    {
+                        m_wasOnGround = true;
+                        onLand(this);
+                    }
+                }
             }
             m_Anim.SetBool("Ground", m_Grounded);
 
@@ -113,6 +126,10 @@ namespace UnityStandardAssets._2D
                     UpdatePushPull(move);
                 }
             }
+            if (onHoldCrate != null)
+            {
+                onHoldCrate(this, crouch);
+            }
 
             // If the player should jump...
             if (m_Grounded && (crouch == false) && jump && m_Anim.GetBool("Ground"))
@@ -121,6 +138,18 @@ namespace UnityStandardAssets._2D
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+                if(onJump != null)
+                {
+                    onJump(this);
+                }
+            }
+        }
+
+        public void Step()
+        {
+            if(onWalk != null)
+            {
+                onWalk(this);
             }
         }
 
