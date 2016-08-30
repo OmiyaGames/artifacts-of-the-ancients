@@ -45,7 +45,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -65,35 +65,43 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 200
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings:
   - buildTarget: iPhone
     maxTextureSize: 1024
     textureFormat: -2
     compressionQuality: 100
+    allowsAlphaSplitting: 0
   - buildTarget: Android
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   - buildTarget: BlackBerry
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   - buildTarget: WP8
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: RobotBoyIdle00
+    - serializedVersion: 2
+      name: RobotBoyIdle00
       rect:
         serializedVersion: 2
         x: 0
@@ -101,9 +109,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle01
       rect:
         serializedVersion: 2
         x: 275
@@ -111,9 +122,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle02
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle02
       rect:
         serializedVersion: 2
         x: 550
@@ -121,9 +135,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle03
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle03
       rect:
         serializedVersion: 2
         x: 825
@@ -131,9 +148,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle04
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle04
       rect:
         serializedVersion: 2
         x: 1100
@@ -141,9 +161,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle05
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle05
       rect:
         serializedVersion: 2
         x: 1375
@@ -151,9 +174,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle06
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle06
       rect:
         serializedVersion: 2
         x: 1650
@@ -161,9 +187,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle07
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle07
       rect:
         serializedVersion: 2
         x: 0
@@ -171,9 +200,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle08
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle08
       rect:
         serializedVersion: 2
         x: 275
@@ -181,9 +213,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle09
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle09
       rect:
         serializedVersion: 2
         x: 550
@@ -191,9 +226,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle10
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle10
       rect:
         serializedVersion: 2
         x: 825
@@ -201,9 +239,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle11
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle11
       rect:
         serializedVersion: 2
         x: 1100
@@ -211,9 +252,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle12
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle12
       rect:
         serializedVersion: 2
         x: 1375
@@ -221,9 +265,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle13
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle13
       rect:
         serializedVersion: 2
         x: 1650
@@ -231,9 +278,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle14
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle14
       rect:
         serializedVersion: 2
         x: 0
@@ -241,9 +291,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle15
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle15
       rect:
         serializedVersion: 2
         x: 275
@@ -251,9 +304,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle16
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle16
       rect:
         serializedVersion: 2
         x: 550
@@ -261,9 +317,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle17
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle17
       rect:
         serializedVersion: 2
         x: 825
@@ -271,9 +330,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle18
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle18
       rect:
         serializedVersion: 2
         x: 1100
@@ -281,9 +343,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle19
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle19
       rect:
         serializedVersion: 2
         x: 1375
@@ -291,9 +356,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle20
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle20
       rect:
         serializedVersion: 2
         x: 1650
@@ -301,9 +369,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle21
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle21
       rect:
         serializedVersion: 2
         x: 0
@@ -311,9 +382,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle22
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle22
       rect:
         serializedVersion: 2
         x: 275
@@ -321,9 +395,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle23
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle23
       rect:
         serializedVersion: 2
         x: 550
@@ -331,9 +408,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle24
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle24
       rect:
         serializedVersion: 2
         x: 825
@@ -341,9 +421,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle25
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle25
       rect:
         serializedVersion: 2
         x: 1100
@@ -351,9 +434,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle26
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle26
       rect:
         serializedVersion: 2
         x: 1375
@@ -361,9 +447,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle27
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle27
       rect:
         serializedVersion: 2
         x: 1650
@@ -371,9 +460,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle28
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle28
       rect:
         serializedVersion: 2
         x: 0
@@ -381,9 +473,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyIdle29
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyIdle29
       rect:
         serializedVersion: 2
         x: 275
@@ -391,8 +486,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-  spritePackingTag: 
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: Default
   userData: 
   assetBundleName: 
+  assetBundleVariant: 

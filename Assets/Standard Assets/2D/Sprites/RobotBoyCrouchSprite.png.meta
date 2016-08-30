@@ -36,7 +36,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -56,35 +56,43 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 200
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings:
   - buildTarget: iPhone
     maxTextureSize: 1024
     textureFormat: -2
     compressionQuality: 100
+    allowsAlphaSplitting: 0
   - buildTarget: Android
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   - buildTarget: BlackBerry
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   - buildTarget: WP8
     maxTextureSize: 1024
     textureFormat: -1
     compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: RobotBoyCrouch00
+    - serializedVersion: 2
+      name: RobotBoyCrouch00
       rect:
         serializedVersion: 2
         x: 0
@@ -92,9 +100,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch01
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch01
       rect:
         serializedVersion: 2
         x: 275
@@ -102,9 +113,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch02
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch02
       rect:
         serializedVersion: 2
         x: 550
@@ -112,9 +126,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch03
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch03
       rect:
         serializedVersion: 2
         x: 825
@@ -122,9 +139,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch04
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch04
       rect:
         serializedVersion: 2
         x: 1100
@@ -132,9 +152,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch05
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch05
       rect:
         serializedVersion: 2
         x: 1375
@@ -142,9 +165,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch06
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch06
       rect:
         serializedVersion: 2
         x: 1650
@@ -152,9 +178,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch07
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch07
       rect:
         serializedVersion: 2
         x: 0
@@ -162,9 +191,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch08
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch08
       rect:
         serializedVersion: 2
         x: 275
@@ -172,9 +204,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch09
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch09
       rect:
         serializedVersion: 2
         x: 550
@@ -182,9 +217,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch10
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch10
       rect:
         serializedVersion: 2
         x: 825
@@ -192,9 +230,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch11
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch11
       rect:
         serializedVersion: 2
         x: 1100
@@ -202,9 +243,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch12
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch12
       rect:
         serializedVersion: 2
         x: 1375
@@ -212,9 +256,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch13
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch13
       rect:
         serializedVersion: 2
         x: 1650
@@ -222,9 +269,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch14
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch14
       rect:
         serializedVersion: 2
         x: 0
@@ -232,9 +282,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch15
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch15
       rect:
         serializedVersion: 2
         x: 275
@@ -242,9 +295,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch16
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch16
       rect:
         serializedVersion: 2
         x: 550
@@ -252,9 +308,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch17
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch17
       rect:
         serializedVersion: 2
         x: 825
@@ -262,9 +321,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch18
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch18
       rect:
         serializedVersion: 2
         x: 1100
@@ -272,9 +334,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch19
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch19
       rect:
         serializedVersion: 2
         x: 1375
@@ -282,9 +347,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyCrouch20
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: RobotBoyCrouch20
       rect:
         serializedVersion: 2
         x: 1650
@@ -292,8 +360,12 @@ TextureImporter:
         width: 275
         height: 275
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-  spritePackingTag: 
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: Default
   userData: 
   assetBundleName: 
+  assetBundleVariant: 
