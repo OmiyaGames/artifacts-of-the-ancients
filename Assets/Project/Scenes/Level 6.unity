@@ -291,7 +291,7 @@ Prefab:
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.size
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4000013721822198, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
       propertyPath: m_LocalPosition.x
@@ -394,7 +394,7 @@ Prefab:
         type: 2}
       propertyPath: allSpeeches.Array.data[4].speech
       value: Long before the government took control of the cloud and made it mandatory
-        for people to use it, the cloud used to be owned an operated by businesses.
+        for people to use it, it used to be owned and operated by businesses.
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
@@ -405,9 +405,8 @@ Prefab:
         type: 2}
       propertyPath: allSpeeches.Array.data[5].speech
       value: They created the cloud and digital distribution in order to take ownership
-        of people's data. People could now access it, but could never truly own it.
-        You see, before the cloud, people used to own their data and would archieve
-        them on these optical discs for safe keeping.
+        of people's data. People could now access their data, but could never truly
+        own it.
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
@@ -417,7 +416,8 @@ Prefab:
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[6].speech
-      value: It looks like there's an disc in the machine. I'm turning it on.
+      value: You see, before the cloud, people used to own their data and would archieve
+        them on these optical discs for safe keeping.
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
@@ -427,113 +427,133 @@ Prefab:
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[7].speech
-      value: Oh my! It cannot be!
+      value: It looks like there's an disc in the machine. I'm turning it on.
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[8].name
-      value: Lucy
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[8].speech
-      value: What is it, Sam, what do you see?
+      value: Oh my! It cannot be!
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[9].name
-      value: Sam
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[9].speech
-      value: A document scan. The original, unabridged version!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[10].name
       value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
-      propertyPath: allSpeeches.Array.data[10].speech
-      value: Of what? What is it?
+      propertyPath: allSpeeches.Array.data[9].speech
+      value: What is it, Sam, what do you see?
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
-      propertyPath: allSpeeches.Array.data[11].name
+      propertyPath: allSpeeches.Array.data[10].name
       value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
+      propertyPath: allSpeeches.Array.data[10].speech
+      value: A document scan. The original, unabridged version!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[11].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
       propertyPath: allSpeeches.Array.data[11].speech
+      value: Of what? What is it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[12].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[12].speech
       value: Some would call it a myth or a legend. Some would call it a fairytale
         that people believe to help them sleep at night. I call it history.
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
-      propertyPath: allSpeeches.Array.data[12].name
+      propertyPath: allSpeeches.Array.data[13].name
       value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
-      propertyPath: allSpeeches.Array.data[12].speech
+      propertyPath: allSpeeches.Array.data[13].speech
       value: What does it say?
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
-      propertyPath: allSpeeches.Array.data[13].name
+      propertyPath: allSpeeches.Array.data[14].name
       value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
-      propertyPath: allSpeeches.Array.data[13].speech
+      propertyPath: allSpeeches.Array.data[14].speech
       value: '"We the People of the United States, in Order to form a more perfect
         Union, establish Justice, insure domestic Tranquility, provide for the common
         defence, promote the general Welfare, and secure the..."'
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
-      propertyPath: allSpeeches.Array.data[14].name
-      value: Lucy
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[14].speech
-      value: I don't understand...
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
-        type: 2}
       propertyPath: allSpeeches.Array.data[15].name
-      value: Sam
+      value: Lucy
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[15].speech
-      value: '"Congress shall make no law respecting an establishment of religion,
-        or prohibiting the free exercise thereof; or abridging the freedom of speech,
-        or of the press; or the right of the people peaceably to assemble, and to
-        petition the Government for a redress of grievances."'
+      value: I don't understand...
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
       propertyPath: allSpeeches.Array.data[16].name
-      value: Lucy
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[16].speech
-      value: What does that mean? What is it, Sam?
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
-        type: 2}
-      propertyPath: allSpeeches.Array.data[17].name
       value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
         type: 2}
+      propertyPath: allSpeeches.Array.data[16].speech
+      value: '"Congress shall make no law respecting an establishment of religion,
+        or prohibiting the free exercise thereof; or abridging the freedom of speech,
+        or of the press; or the right of the people peaceably to..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[17].name
+      value: Lucy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
       propertyPath: allSpeeches.Array.data[17].speech
+      value: What does that mean? What is it, Sam?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[18].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[18].speech
       value: Salvation.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[19].name
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011868490460, guid: 1396d4cbbbed05e42b3ffdc097997119,
+        type: 2}
+      propertyPath: allSpeeches.Array.data[19].speech
+      value: I'm on my way out, Lucy. People must see this. We must spread the word,
+        no matter the cost!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1396d4cbbbed05e42b3ffdc097997119, type: 2}
@@ -1256,7 +1276,7 @@ Prefab:
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
       propertyPath: allSpeeches.Array.data[2].speech
-      value: I believe I do.
+      value: Not yet. I will keep you posted.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010374019784, guid: 0cb66aa51495c5a448ab2b004a0e4f76,
         type: 2}
