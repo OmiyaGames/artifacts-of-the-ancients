@@ -29,6 +29,8 @@ public class StageState : MonoBehaviour
     SoundEffect jump = null;
     [SerializeField]
     SoundEffect drag = null;
+    [SerializeField]
+    SoundEffect death = null;
 
     PlatformerCharacter2D platformer = null;
     Platformer2DUserControl controller = null;
@@ -288,6 +290,10 @@ public class StageState : MonoBehaviour
         else
         {
             transform.position = startPosition;
+        }
+        if(death != null)
+        {
+            death.Play();
         }
     }
 
