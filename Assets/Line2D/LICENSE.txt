@@ -1,0 +1,2 @@
+Line2DRenderer package is a free download, available at https://www.assetstore.unity3d.com/en/#!/content/48841
+Everything in this folder (besides this license text file) is made by Anthony Beyer.
